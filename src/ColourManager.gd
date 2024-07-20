@@ -1,5 +1,7 @@
 extends Node
 
+signal active_colour_changed(colour: Color)
+
 # TODO: Probably replace these with less offensive versions of each (i.e. not maxed out rgb vals)
 var colours: Array[Color] = [
 	# single colours
