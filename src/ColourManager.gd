@@ -7,7 +7,7 @@ var colours: Array[Color] = [
 	Color.BLUE,
 	Color.GREEN,
 	# combos of two
-	Color.PURPLE,
+	Color.MAGENTA,
 	Color.YELLOW,
 	Color.CYAN,
 	# Three
