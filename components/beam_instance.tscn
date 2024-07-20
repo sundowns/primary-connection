@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm5xjt6u7nxic"]
+
+[ext_resource type="Script" path="res://components/beam_instance.gd" id="1_3kgu1"]
+[ext_resource type="PackedScene" uid="uid://dro4a83wooiu4" path="res://assets/foamBulletA.glb" id="1_ghuss"]
+
+[node name="BeamInstance" type="Node3D"]
+script = ExtResource("1_3kgu1")
+
+[node name="foamBulletA2" parent="." instance=ExtResource("1_ghuss")]
+transform = Transform3D(1, 0, 0, 0, -8.74228e-07, -1, 0, 20, -4.37114e-08, 0, 0, -0.5)
+
+[editable path="foamBulletA2"]

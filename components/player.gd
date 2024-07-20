@@ -22,17 +22,19 @@ func fire_at_point_on_screen(screen_position: Vector2) -> void:
 	var from: Vector3 = camera.project_ray_origin(screen_position)
 	var to: Vector3 = from + camera.project_ray_normal(screen_position) * FIRE_RAY_LENGTH
 	var raycast_result: Dictionary = get_world_3d().direct_space_state.intersect_ray(create_raycast_collision_query(from, to, target_collision_mask))
+	var end_position := to
 	if raycast_result:
 		var collider = raycast_result['collider']
+		#end_position = raycast_result['position']
 		if collider is Target:
 			collider._on_hit(ColourManager.active_colour)
 	play_firing_animation()
+	blaster.create_beam(end_position, ColourManager.active_colour)
 
 func play_firing_animation() -> void:
 	if animation_player.is_playing():
 		animation_player.stop()
 	animation_player.play("FireBlaster")
-	
 
 func create_raycast_collision_query(from: Vector3, to: Vector3, mask: int) -> PhysicsRayQueryParameters3D:
 	var ray_query := PhysicsRayQueryParameters3D.new()

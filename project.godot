@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 ColourManager="*res://src/ColourManager.gd"
+DependencyHelper="*res://src/DependencyHelper.gd"
 
 [display]
 

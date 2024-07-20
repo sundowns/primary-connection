@@ -16,3 +16,6 @@ surface_material_override/0 = ExtResource("2_eyl7f")
 surface_material_override/1 = ExtResource("3_kwx6o")
 surface_material_override/2 = ExtResource("4_h1qj8")
 surface_material_override/3 = ExtResource("5_6hf1k")
+
+[node name="Muzzle" type="Marker3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0755457, 0.386207)

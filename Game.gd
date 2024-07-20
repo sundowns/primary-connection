@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var player: Player = $Player
+@onready var effects_anchor: Node = $Effects
 
 @onready var target_anchor: Node = $Targets
 @onready var spawn_targets_timer: Timer = $SpawnTargetsInterval
@@ -9,6 +10,7 @@ extends Node3D
 var target_scene: PackedScene = preload("res://components/target.tscn")
 
 func _ready():
+	DependencyHelper.store("Effects", effects_anchor) #🤠
 	call_deferred("spawn_targets")
 
 func _input(event: InputEvent):

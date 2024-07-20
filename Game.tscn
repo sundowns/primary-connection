@@ -17,11 +17,15 @@ wait_time = 5.0
 autostart = true
 
 [node name="Player" parent="." instance=ExtResource("1_cynns")]
+target_collision_mask = 1
+aiming_blaster_collision_mask = 2
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.956305, 0.185971, 0.225601, -6.74576e-08, -0.771625, 0.636078, 0.292372, -0.608285, -0.737908, 0, 0, 0)
 light_energy = 2.0
 metadata/_edit_lock_ = true
+
+[node name="Effects" type="Node" parent="."]
 
 [node name="Targets" type="Node" parent="."]
 
