@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2ndq58r04ta4"]
+
+[ext_resource type="Script" path="res://ui/colour_control_node.gd" id="1_hfwl3"]
+[ext_resource type="Texture2D" uid="uid://bibyym74rhs3p" path="res://assets/keyboard_q.svg" id="2_t1ox7"]
+[ext_resource type="Texture2D" uid="uid://dxp0wfibstnv5" path="res://assets/keyboard_q_outline.svg" id="3_u4u5n"]
+
+[node name="ColourControlNode" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hfwl3")
+
+[node name="Enabled" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="TextureRect" type="TextureRect" parent="Enabled"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_t1ox7")
+stretch_mode = 3
+
+[node name="Disabled" type="Control" parent="."]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Disabled"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_u4u5n")
+stretch_mode = 3

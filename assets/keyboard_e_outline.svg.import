@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxwbtqgd755pj"
-path="res://.godot/imported/crosshairs_vector.svg-9bff5c55ecb0ec21528149088771b978.ctex"
+uid="uid://bs45820r1ir3n"
+path="res://.godot/imported/keyboard_e_outline.svg-fd573c8e38d6cad85afdfe662ee0d8e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crosshairs_vector.svg"
-dest_files=["res://.godot/imported/crosshairs_vector.svg-9bff5c55ecb0ec21528149088771b978.ctex"]
+source_file="res://assets/keyboard_e_outline.svg"
+dest_files=["res://.godot/imported/keyboard_e_outline.svg-fd573c8e38d6cad85afdfe662ee0d8e3.ctex"]
 
 [params]
 

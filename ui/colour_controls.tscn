@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://b52ubnjfv5hcg"]
+
+[ext_resource type="Script" path="res://ui/colour_controls.gd" id="1_scv8i"]
+[ext_resource type="PackedScene" uid="uid://b2ndq58r04ta4" path="res://ui/colour_control_node.tscn" id="2_hgeaw"]
+[ext_resource type="Texture2D" uid="uid://c605hwhn74lh1" path="res://assets/keyboard_w_outline.svg" id="3_387sb"]
+[ext_resource type="Texture2D" uid="uid://bnocrgwklpk87" path="res://assets/keyboard_w.svg" id="4_ibjfl"]
+[ext_resource type="Texture2D" uid="uid://bs45820r1ir3n" path="res://assets/keyboard_e_outline.svg" id="5_go8ll"]
+[ext_resource type="Texture2D" uid="uid://bc2wn6ouprvty" path="res://assets/keyboard_e.svg" id="6_b2ikb"]
+
+[node name="ColourControls" type="Control"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_scv8i")
+
+[node name="Nodes" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 0
+offset_right = 150.0
+offset_bottom = 150.0
+
+[node name="RedNode" parent="Nodes" instance=ExtResource("2_hgeaw")]
+layout_mode = 1
+offset_right = 64.0
+offset_bottom = 64.0
+is_enabled = true
+
+[node name="GreenNode" parent="Nodes" instance=ExtResource("2_hgeaw")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -64.0
+offset_right = 32.0
+grow_horizontal = 2
+grow_vertical = 0
+outline_image = ExtResource("3_387sb")
+filled_image = ExtResource("4_ibjfl")
+colour = Color(0, 1, 0, 1)
+
+[node name="BlueNode" parent="Nodes" instance=ExtResource("2_hgeaw")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+outline_image = ExtResource("5_go8ll")
+filled_image = ExtResource("6_b2ikb")
+colour = Color(0, 0, 1, 1)

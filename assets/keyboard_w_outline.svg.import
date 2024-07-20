@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd4ynp0pwua5t"
-path="res://.godot/imported/crosshair040.png-8991e71c900450719f01f035c5ca7699.ctex"
+uid="uid://c605hwhn74lh1"
+path="res://.godot/imported/keyboard_w_outline.svg-df8422008bc39a77b8beac60fc5537b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crosshair040.png"
-dest_files=["res://.godot/imported/crosshair040.png-8991e71c900450719f01f035c5ca7699.ctex"]
+source_file="res://assets/keyboard_w_outline.svg"
+dest_files=["res://.godot/imported/keyboard_w_outline.svg-df8422008bc39a77b8beac60fc5537b3.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

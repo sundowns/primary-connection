@@ -42,3 +42,7 @@ func get_material(colour: Color) -> BaseMaterial3D:
 func set_active_colour(colour: Color) -> void:
 	active_colour = colour
 	active_colour_changed.emit(active_colour)
+
+func colour_changed(red_enabled: bool, green_enabled: bool, blue_enabled: bool) -> void:
+	# TODO: some disgusting switch statement probably
+	print('colour status %s %s %s' % [red_enabled,green_enabled,blue_enabled])
