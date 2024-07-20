@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cco6xg16mekua"]
+
+[ext_resource type="PackedScene" uid="uid://wmfpm5hfj3mu" path="res://components/blaster.tscn" id="1_dw6ge"]
+
+[node name="Player" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Hand" type="Node3D" parent="Camera3D"]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0, -0.295, -0.5)
+
+[node name="Blaster" parent="Camera3D/Hand" instance=ExtResource("1_dw6ge")]
