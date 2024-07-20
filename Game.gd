@@ -15,6 +15,10 @@ func _input(event: InputEvent):
 	if event.is_action_pressed("fire"):
 		player.fire_at_point_on_screen(get_viewport().get_mouse_position())
 
+func _process(_delta: float) -> void:
+	for target in target_anchor.get_children():
+		target.look_at(player.global_position)
+
 func _on_spawn_targets_interval_timeout():
 	var current_target_count: int = target_anchor.get_child_count()
 	if current_target_count < max_target_count:
