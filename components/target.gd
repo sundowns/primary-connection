@@ -9,3 +9,7 @@ func _ready() -> void:
 
 func update_mesh() -> void:
 	mesh.set_surface_override_material(0, ColourManager.get_material(colour))
+
+func _on_hit() -> void:
+	print('boom')
+	queue_free()
