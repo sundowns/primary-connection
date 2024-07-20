@@ -22,9 +22,11 @@ func _on_hit(attack_colour: ColourManager.ColourOption) -> void:
 
 func handle_correct_colour_hit() -> void:
 	mesh.visible = false
+	remove_child(shatter_particles)
+	var effects_node = DependencyHelper.retrieve("Effects")
+	effects_node.add_child(shatter_particles)
+	shatter_particles.global_position = global_position
 	shatter_particles.emitting = true
-	collision_shape.disabled = false
-	await shatter_particles.finished
 	queue_free()
 
 func handle_wrong_colour_hit() -> void:
