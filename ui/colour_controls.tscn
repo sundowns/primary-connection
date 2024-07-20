@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://ui/colour_controls.gd" id="1_scv8i"]
 [ext_resource type="PackedScene" uid="uid://b2ndq58r04ta4" path="res://ui/colour_control_node.tscn" id="2_hgeaw"]
 [ext_resource type="Texture2D" uid="uid://c605hwhn74lh1" path="res://assets/keyboard_w_outline.svg" id="3_387sb"]
-[ext_resource type="Texture2D" uid="uid://btk2p8djapayk" path="res://assets/keyboard_a_outline.svg" id="3_foa6d"]
 [ext_resource type="Texture2D" uid="uid://bnocrgwklpk87" path="res://assets/keyboard_w.svg" id="4_ibjfl"]
-[ext_resource type="Texture2D" uid="uid://dt2lm44q86ue3" path="res://assets/keyboard_a.svg" id="4_wvc7y"]
 [ext_resource type="Texture2D" uid="uid://bw45dduymtmgy" path="res://assets/keyboard_d_outline.svg" id="7_um6cm"]
 [ext_resource type="Texture2D" uid="uid://x2dpku1wqgmm" path="res://assets/keyboard_d.svg" id="8_ypcim"]
+[ext_resource type="Texture2D" uid="uid://sfp8w675kak7" path="res://assets/fightJ.png" id="9_q8hyj"]
+[ext_resource type="Texture2D" uid="uid://c30ggewxki1uy" path="res://assets/flair_arrow_long.svg" id="10_8cpef"]
 
 [node name="ColourControls" type="MarginContainer"]
 custom_minimum_size = Vector2(600, 600)
@@ -27,10 +27,99 @@ script = ExtResource("1_scv8i")
 layout_mode = 2
 
 [node name="Nodes" type="Control" parent="Control"]
-custom_minimum_size = Vector2(325, 300)
+custom_minimum_size = Vector2(320, 288)
 anchors_preset = 0
 offset_right = 150.0
 offset_bottom = 150.0
+
+[node name="Overlays" type="Control" parent="Control/Nodes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Connections" type="Control" parent="Control/Nodes/Overlays"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RedConnection" type="TextureRect" parent="Control/Nodes/Overlays/Connections"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.37
+offset_top = -3.83501
+offset_right = 6.63019
+offset_bottom = 60.165
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 5.79449
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("10_8cpef")
+
+[node name="YellowConnection" type="TextureRect" parent="Control/Nodes/Overlays/Connections"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -48.855
+offset_right = 34.0
+offset_bottom = 15.1451
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("10_8cpef")
+
+[node name="BlueConnection" type="TextureRect" parent="Control/Nodes/Overlays/Connections"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.826004
+offset_top = -3.935
+offset_right = 63.1742
+offset_bottom = 60.065
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.59538
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("10_8cpef")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Nodes/Overlays"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 28
+metadata/_edit_lock_ = true
+
+[node name="CentreContainer" type="CenterContainer" parent="Control/Nodes/Overlays/MarginContainer"]
+layout_mode = 2
+
+[node name="ProductColour" type="TextureRect" parent="Control/Nodes/Overlays/MarginContainer/CentreContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("9_q8hyj")
 
 [node name="RedNode" parent="Control/Nodes" instance=ExtResource("2_hgeaw")]
 layout_mode = 1
@@ -40,10 +129,9 @@ anchor_bottom = 1.0
 offset_top = -128.0
 offset_bottom = 0.0
 grow_vertical = 0
-outline_image = ExtResource("3_foa6d")
-filled_image = ExtResource("4_wvc7y")
 enabled_colour = Color(1, 0.25, 0.25, 1)
 is_enabled = true
+metadata/_edit_lock_ = true
 
 [node name="YellowNode" parent="Control/Nodes" instance=ExtResource("2_hgeaw")]
 layout_mode = 1
@@ -56,6 +144,7 @@ grow_horizontal = 2
 outline_image = ExtResource("3_387sb")
 filled_image = ExtResource("4_ibjfl")
 enabled_colour = Color(1, 1, 0, 1)
+metadata/_edit_lock_ = true
 
 [node name="BlueNode" parent="Control/Nodes" instance=ExtResource("2_hgeaw")]
 layout_mode = 1
@@ -73,3 +162,4 @@ grow_vertical = 0
 outline_image = ExtResource("7_um6cm")
 filled_image = ExtResource("8_ypcim")
 enabled_colour = Color(0.25, 0.4625, 1, 1)
+metadata/_edit_lock_ = true

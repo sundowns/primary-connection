@@ -46,11 +46,5 @@ shape = SubResource("BoxShape3D_4l5gn")
 [node name="Crosshair" parent="UI" instance=ExtResource("3_vix6t")]
 
 [node name="ColourControls" parent="UI" instance=ExtResource("5_amdyr")]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -600.0
-offset_bottom = 0.0
-grow_vertical = 0
 
 [connection signal="timeout" from="SpawnTargetsInterval" to="." method="_on_spawn_targets_interval_timeout"]

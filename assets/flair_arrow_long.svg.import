@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bibyym74rhs3p"
-path="res://.godot/imported/keyboard_q.svg-bbd966829f9cacf31943e88f9f154939.ctex"
+uid="uid://c30ggewxki1uy"
+path="res://.godot/imported/flair_arrow_long.svg-46fac179d6882e70011499226aa36a47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/keyboard_q.svg"
-dest_files=["res://.godot/imported/keyboard_q.svg-bbd966829f9cacf31943e88f9f154939.ctex"]
+source_file="res://assets/flair_arrow_long.svg"
+dest_files=["res://.godot/imported/flair_arrow_long.svg-46fac179d6882e70011499226aa36a47.ctex"]
 
 [params]
 

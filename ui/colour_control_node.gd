@@ -1,8 +1,8 @@
 extends Control
 class_name ColourControlNode
 
-@export var outline_image: Texture2D = preload("res://assets/keyboard_q_outline.svg")
-@export var filled_image: Texture2D = preload("res://assets/keyboard_q.svg")
+@export var outline_image: Texture2D = preload("res://assets/keyboard_a_outline.svg")
+@export var filled_image: Texture2D = preload("res://assets/keyboard_a.svg")
 @export var enabled_colour: Color = ColourManager.colours[ColourManager.ColourOption.RED]
 @export var disabled_colour: Color = Color.DIM_GRAY
 @export var is_enabled: bool = false
