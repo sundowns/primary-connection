@@ -1,9 +1,9 @@
-extends Control
+extends MarginContainer
 class_name ColourControls
 
-@onready var red_node: ColourControlNode = $Nodes/RedNode
-@onready var green_node: ColourControlNode = $Nodes/GreenNode
-@onready var blue_node: ColourControlNode = $Nodes/BlueNode
+@onready var red_node: ColourControlNode = $Control/Nodes/RedNode
+@onready var green_node: ColourControlNode = $Control/Nodes/GreenNode
+@onready var blue_node: ColourControlNode = $Control/Nodes/BlueNode
 
 func _ready():
 	call_deferred("colours_changed")

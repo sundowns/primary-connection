@@ -17,7 +17,6 @@ func _on_hit(attack_colour: ColourManager.ColourOption) -> void:
 		handle_wrong_colour_hit()
 
 func handle_correct_colour_hit() -> void:
-	print('boom')
 	queue_free()
 
 func handle_wrong_colour_hit() -> void:
