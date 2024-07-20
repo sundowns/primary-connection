@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Target
 
 @export var colour: Color = Color.RED
 @onready var mesh: MeshInstance3D = $targetA2/targetA

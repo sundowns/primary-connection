@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cco6xg16mekua"]
+[gd_scene load_steps=3 format=3 uid="uid://cco6xg16mekua"]
 
+[ext_resource type="Script" path="res://components/player.gd" id="1_ae1ge"]
 [ext_resource type="PackedScene" uid="uid://wmfpm5hfj3mu" path="res://components/blaster.tscn" id="1_dw6ge"]
 
 [node name="Player" type="Node3D"]
+script = ExtResource("1_ae1ge")
 metadata/_edit_group_ = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
