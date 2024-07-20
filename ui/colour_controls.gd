@@ -2,7 +2,7 @@ extends MarginContainer
 class_name ColourControls
 
 @onready var red_node: ColourControlNode = $Control/Nodes/RedNode
-@onready var green_node: ColourControlNode = $Control/Nodes/GreenNode
+@onready var yellow_node: ColourControlNode = $Control/Nodes/YellowNode
 @onready var blue_node: ColourControlNode = $Control/Nodes/BlueNode
 
 func _ready():
@@ -13,8 +13,8 @@ func _input(event: InputEvent):
 	if event.is_action_pressed("toggle_red"):
 		red_node.toggle()
 		any_node_was_toggled = true
-	elif event.is_action_pressed("toggle_green"):
-		green_node.toggle()
+	elif event.is_action_pressed("toggle_yellow"):
+		yellow_node.toggle()
 		any_node_was_toggled = true
 	elif event.is_action_pressed("toggle_blue"):
 		blue_node.toggle()
@@ -23,5 +23,5 @@ func _input(event: InputEvent):
 		colours_changed()
 
 func colours_changed() -> void:
-	ColourManager.colour_changed(red_node.is_enabled, green_node.is_enabled, blue_node.is_enabled)
+	ColourManager.colour_changed(red_node.is_enabled, yellow_node.is_enabled, blue_node.is_enabled)
 	# TODO: update the connections and probably some central pretty thing to show colour

@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2ndq58r04ta4"]
+[gd_scene load_steps=5 format=3 uid="uid://b2ndq58r04ta4"]
 
 [ext_resource type="Script" path="res://ui/colour_control_node.gd" id="1_hfwl3"]
 [ext_resource type="Texture2D" uid="uid://bibyym74rhs3p" path="res://assets/keyboard_q.svg" id="2_t1ox7"]
 [ext_resource type="Texture2D" uid="uid://dxp0wfibstnv5" path="res://assets/keyboard_q_outline.svg" id="3_u4u5n"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ullky"]
+
 [node name="ColourControlNode" type="Control"]
-modulate = Color(1, 1, 1, 0.588235)
+material = SubResource("CanvasItemMaterial_ullky")
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 3
 anchors_preset = 0

@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b52ubnjfv5hcg"]
+[gd_scene load_steps=9 format=3 uid="uid://b52ubnjfv5hcg"]
 
 [ext_resource type="Script" path="res://ui/colour_controls.gd" id="1_scv8i"]
 [ext_resource type="PackedScene" uid="uid://b2ndq58r04ta4" path="res://ui/colour_control_node.tscn" id="2_hgeaw"]
 [ext_resource type="Texture2D" uid="uid://c605hwhn74lh1" path="res://assets/keyboard_w_outline.svg" id="3_387sb"]
+[ext_resource type="Texture2D" uid="uid://btk2p8djapayk" path="res://assets/keyboard_a_outline.svg" id="3_foa6d"]
 [ext_resource type="Texture2D" uid="uid://bnocrgwklpk87" path="res://assets/keyboard_w.svg" id="4_ibjfl"]
-[ext_resource type="Texture2D" uid="uid://bs45820r1ir3n" path="res://assets/keyboard_e_outline.svg" id="5_go8ll"]
-[ext_resource type="Texture2D" uid="uid://bc2wn6ouprvty" path="res://assets/keyboard_e.svg" id="6_b2ikb"]
+[ext_resource type="Texture2D" uid="uid://dt2lm44q86ue3" path="res://assets/keyboard_a.svg" id="4_wvc7y"]
+[ext_resource type="Texture2D" uid="uid://bw45dduymtmgy" path="res://assets/keyboard_d_outline.svg" id="7_um6cm"]
+[ext_resource type="Texture2D" uid="uid://x2dpku1wqgmm" path="res://assets/keyboard_d.svg" id="8_ypcim"]
 
 [node name="ColourControls" type="MarginContainer"]
 custom_minimum_size = Vector2(600, 600)
@@ -25,44 +27,49 @@ script = ExtResource("1_scv8i")
 layout_mode = 2
 
 [node name="Nodes" type="Control" parent="Control"]
-custom_minimum_size = Vector2(350, 350)
+custom_minimum_size = Vector2(325, 300)
 anchors_preset = 0
 offset_right = 150.0
 offset_bottom = 150.0
 
 [node name="RedNode" parent="Control/Nodes" instance=ExtResource("2_hgeaw")]
 layout_mode = 1
-offset_right = 64.0
-offset_bottom = 64.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_bottom = 0.0
+grow_vertical = 0
+outline_image = ExtResource("3_foa6d")
+filled_image = ExtResource("4_wvc7y")
 enabled_colour = Color(1, 0.25, 0.25, 1)
 is_enabled = true
 
-[node name="GreenNode" parent="Control/Nodes" instance=ExtResource("2_hgeaw")]
+[node name="YellowNode" parent="Control/Nodes" instance=ExtResource("2_hgeaw")]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -32.0
-offset_top = -64.0
-offset_right = 32.0
-offset_bottom = 0.0
+offset_left = -64.0
+offset_right = 64.0
 grow_horizontal = 2
-grow_vertical = 0
 outline_image = ExtResource("3_387sb")
 filled_image = ExtResource("4_ibjfl")
-enabled_colour = Color(0.25, 1, 0.25, 1)
+enabled_colour = Color(1, 1, 0, 1)
 
 [node name="BlueNode" parent="Control/Nodes" instance=ExtResource("2_hgeaw")]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
-offset_left = -64.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -128.0
 offset_right = 0.0
-offset_bottom = 64.0
+offset_bottom = 0.0
 grow_horizontal = 0
-outline_image = ExtResource("5_go8ll")
-filled_image = ExtResource("6_b2ikb")
+grow_vertical = 0
+outline_image = ExtResource("7_um6cm")
+filled_image = ExtResource("8_ypcim")
 enabled_colour = Color(0.25, 0.4625, 1, 1)

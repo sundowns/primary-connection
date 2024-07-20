@@ -5,11 +5,11 @@ var active_colour: ColourOption
 
 enum ColourOption {
 	RED,
-	GREEN,
+	YELLOW,
 	BLUE,
 	PURPLE,
-	YELLOW,
-	CYAN,
+	GREEN,
+	ORANGE,
 	WHITE,
 	BLACK,
 }
@@ -17,12 +17,12 @@ enum ColourOption {
 var colours: Dictionary = {
 	# single colours
 	ColourOption.RED: Color("#ff4040"),
-	ColourOption.GREEN: Color("#40ff40"),
+	ColourOption.YELLOW: Color("#ffff14"),
 	ColourOption.BLUE: Color("#4076ff"),
 	# combos of two
 	ColourOption.PURPLE: Color.PURPLE,
-	ColourOption.YELLOW: Color.GOLD,
-	ColourOption.CYAN: Color.TURQUOISE,
+	ColourOption.GREEN: Color("#40ff40"),
+	ColourOption.ORANGE: Color.DARK_ORANGE,
 	# Three
 	ColourOption.WHITE: Color.WHITE,
 	# None
@@ -53,27 +53,27 @@ func set_active_colour(colour: ColourOption) -> void:
 	active_colour_changed.emit(active_colour)
 
 # what have i done.......
-func colour_changed(red_enabled: bool, green_enabled: bool, blue_enabled: bool) -> void:
+func colour_changed(red_enabled: bool, yellow_enabled: bool, blue_enabled: bool) -> void:
 	if red_enabled:
-		if green_enabled and blue_enabled:
+		if yellow_enabled and blue_enabled:
 			# all 3, white
 			set_active_colour(ColourOption.WHITE)
-		elif green_enabled:
-			# red + green = yellow
-			set_active_colour(ColourOption.YELLOW)
+		elif yellow_enabled:
+			# red + yellow = orange
+			set_active_colour(ColourOption.ORANGE)
 		elif blue_enabled:
 			# red + blue = purple
 			set_active_colour(ColourOption.PURPLE)
 		else:
 			# just red
 			set_active_colour(ColourOption.RED)
-	elif green_enabled:
+	elif yellow_enabled:
 		if blue_enabled:
-			# green + blue = cyan
-			set_active_colour(ColourOption.CYAN)
+			# yellow + blue = green
+			set_active_colour(ColourOption.GREEN)
 		else:
 			# just green
-			set_active_colour(ColourOption.GREEN)
+			set_active_colour(ColourOption.YELLOW)
 	elif blue_enabled:
 		set_active_colour(ColourOption.BLUE)
 	else:
