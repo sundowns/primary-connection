@@ -49,5 +49,5 @@ func point_blaster_at_crosshair(_delta: float) -> void:
 	if raycast_result:
 		hand.look_at(raycast_result['position'])
 
-func _on_active_colour_changed(new_active_colour: Color) -> void:
-	blaster.set_colour(new_active_colour)
+func _on_active_colour_changed(new_active_colour: ColourManager.ColourOption) -> void:
+	blaster.set_colour(ColourManager.colours[new_active_colour])

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dxp0wfibstnv5" path="res://assets/keyboard_q_outline.svg" id="3_u4u5n"]
 
 [node name="ColourControlNode" type="Control"]
+modulate = Color(1, 1, 1, 0.588235)
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchors_preset = 0

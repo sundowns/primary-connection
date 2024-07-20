@@ -5,6 +5,9 @@ class_name ColourControls
 @onready var green_node: ColourControlNode = $Nodes/GreenNode
 @onready var blue_node: ColourControlNode = $Nodes/BlueNode
 
+func _ready():
+	call_deferred("colours_changed")
+
 func _input(event: InputEvent):
 	var any_node_was_toggled: bool = false
 	if event.is_action_pressed("toggle_red"):
