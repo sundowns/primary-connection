@@ -1,7 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://cco6xg16mekua"]
+[gd_scene load_steps=6 format=3 uid="uid://cco6xg16mekua"]
 
 [ext_resource type="Script" path="res://components/player.gd" id="1_ae1ge"]
 [ext_resource type="PackedScene" uid="uid://wmfpm5hfj3mu" path="res://components/blaster.tscn" id="1_dw6ge"]
+
+[sub_resource type="Animation" id="Animation_n8f8q"]
+resource_name = "FireBlaster"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/Hand/Blaster:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.125), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1fyj1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/Hand/Blaster:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wavv"]
+_data = {
+"FireBlaster": SubResource("Animation_n8f8q"),
+"RESET": SubResource("Animation_1fyj1")
+}
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_ae1ge")
@@ -14,4 +52,9 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 
 transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0, -0.295, -0.4)
 
 [node name="Blaster" parent="Camera3D/Hand" instance=ExtResource("1_dw6ge")]
-transform = Transform3D(-0.8, 0, -6.99382e-08, 0, 0.8, 0, 6.99382e-08, 0, -0.8, 0, 0, 0)
+transform = Transform3D(-0.8, 0, -1.20797e-07, 0, 0.8, 0, 1.20797e-07, 0, -0.8, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4wavv")
+}

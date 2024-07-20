@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2vf3wvi1vp7i"]
+[gd_scene load_steps=6 format=3 uid="uid://b2vf3wvi1vp7i"]
 
 [ext_resource type="Script" path="res://components/target.gd" id="1_4gnro"]
 [ext_resource type="PackedScene" uid="uid://divekxuftrc1g" path="res://assets/targetA.glb" id="1_mkihj"]
 [ext_resource type="Material" uid="uid://b1qh8cqnscqgv" path="res://materials/base_target_colour.tres" id="2_as8pt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ui1xi"]
+albedo_color = Color(0.454524, 0.454524, 0.454524, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ar7qa"]
 height = 0.05
@@ -17,6 +20,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 
 [node name="targetA" parent="targetA2" index="0"]
 surface_material_override/0 = ExtResource("2_as8pt")
+surface_material_override/1 = SubResource("StandardMaterial3D_ui1xi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

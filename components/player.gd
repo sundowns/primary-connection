@@ -7,6 +7,7 @@ const FIRE_RAY_LENGTH: float = 1000
 @export_flags_3d_physics var aiming_blaster_collision_mask: int = 2
 const AIM_RAY_LENGTH: float = 10000
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var camera: Camera3D = $Camera3D
 @onready var hand: Node3D = $Camera3D/Hand
 @onready var blaster: Blaster = $Camera3D/Hand/Blaster
@@ -25,6 +26,13 @@ func fire_at_point_on_screen(screen_position: Vector2) -> void:
 		var collider = raycast_result['collider']
 		if collider is Target:
 			collider._on_hit(ColourManager.active_colour)
+	play_firing_animation()
+
+func play_firing_animation() -> void:
+	if animation_player.is_playing():
+		animation_player.stop()
+	animation_player.play("FireBlaster")
+	
 
 func create_raycast_collision_query(from: Vector3, to: Vector3, mask: int) -> PhysicsRayQueryParameters3D:
 	var ray_query := PhysicsRayQueryParameters3D.new()
