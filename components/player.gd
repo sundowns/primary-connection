@@ -6,6 +6,10 @@ const FIRE_RAY_LENGTH: float = 1000
 @export_flags_3d_physics var collision_mask: int = 1
 
 @onready var camera: Camera3D = $Camera3D
+@onready var blaster: Blaster = $Camera3D/Hand/Blaster
+
+func _ready() -> void:
+	ColourManager.active_colour_changed.connect(self._on_active_colour_changed)
 
 func fire_at_point_on_screen(screen_position: Vector2) -> void:
 	var from: Vector3 = camera.project_ray_origin(screen_position)
@@ -14,7 +18,7 @@ func fire_at_point_on_screen(screen_position: Vector2) -> void:
 	if raycast_result:
 		var collider = raycast_result['collider']
 		if collider is Target:
-			collider._on_hit()
+			collider._on_hit(ColourManager.active_colour)
 
 func create_raycast_collision_query(from: Vector3, to: Vector3) -> PhysicsRayQueryParameters3D:
 	var ray_query := PhysicsRayQueryParameters3D.new()
@@ -22,3 +26,6 @@ func create_raycast_collision_query(from: Vector3, to: Vector3) -> PhysicsRayQue
 	ray_query.to = to
 	ray_query.collision_mask = collision_mask
 	return ray_query
+
+func _on_active_colour_changed(new_active_colour: Color) -> void:
+	blaster.set_colour(new_active_colour)

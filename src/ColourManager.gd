@@ -1,6 +1,7 @@
 extends Node
 
 signal active_colour_changed(colour: Color)
+var active_colour: Color
 
 # TODO: Probably replace these with less offensive versions of each (i.e. not maxed out rgb vals)
 var colours: Array[Color] = [
@@ -23,6 +24,7 @@ var materials: Dictionary = {}
 
 func _ready():
 	generate_materials()
+	call_deferred("set_active_colour", Color.YELLOW)
 
 func generate_materials() -> void:
 	for colour in colours:
@@ -36,3 +38,7 @@ func get_material(colour: Color) -> BaseMaterial3D:
 	else:
 		push_error("Attempted to fetch material for unregistered colour: ", colour)
 		return base_material
+
+func set_active_colour(colour: Color) -> void:
+	active_colour = colour
+	active_colour_changed.emit(active_colour)

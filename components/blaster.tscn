@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://wmfpm5hfj3mu"]
+[gd_scene load_steps=7 format=3 uid="uid://wmfpm5hfj3mu"]
 
 [ext_resource type="PackedScene" uid="uid://bx84vavgex705" path="res://assets/blasterG.glb" id="1_u654o"]
+[ext_resource type="Script" path="res://components/blaster.gd" id="2_bris6"]
 [ext_resource type="Material" uid="uid://dsrrtm717aaxx" path="res://materials/metal.tres" id="2_eyl7f"]
 [ext_resource type="Material" uid="uid://dmexntw6rrdf1" path="res://materials/metal_dark.tres" id="3_kwx6o"]
 [ext_resource type="Material" uid="uid://b57eu2ctsjsa1" path="res://materials/metal_darker.tres" id="4_h1qj8"]
@@ -8,6 +9,7 @@
 
 [node name="Blaster" instance=ExtResource("1_u654o")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+script = ExtResource("2_bris6")
 
 [node name="blasterG" parent="." index="0"]
 surface_material_override/0 = ExtResource("2_eyl7f")
