@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://k3rsi41hyjlo"]
+[gd_scene load_steps=6 format=3 uid="uid://k3rsi41hyjlo"]
 
 [ext_resource type="PackedScene" uid="uid://cco6xg16mekua" path="res://components/player.tscn" id="1_cynns"]
 [ext_resource type="Script" path="res://Game.gd" id="1_ihufm"]
 [ext_resource type="PackedScene" uid="uid://b2vf3wvi1vp7i" path="res://components/target.tscn" id="2_5q3a7"]
 [ext_resource type="PackedScene" uid="uid://lwnqyjojfgo1" path="res://ui/crosshair.tscn" id="3_vix6t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4l5gn"]
+size = Vector3(1000, 1000, 1)
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_ihufm")
@@ -11,7 +14,7 @@ script = ExtResource("1_ihufm")
 [node name="Player" parent="." instance=ExtResource("1_cynns")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 3.85671e-09, 1.43934e-08, -1.29048e-08, -0.258819, 0.965926, 7.45058e-09, -0.965926, -0.258819, 0, 0, 0)
+transform = Transform3D(1, 3.18151e-08, -6.74576e-08, 6.74576e-08, -0.771625, 0.636078, -3.18151e-08, -0.636078, -0.771625, 0, 0, 0)
 light_energy = 2.0
 metadata/_edit_lock_ = true
 
@@ -28,3 +31,11 @@ colour = Color(1, 1, 0, 1)
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Crosshair" parent="UI" instance=ExtResource("3_vix6t")]
+
+[node name="BackgroundWall" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BackgroundWall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 300)
+shape = SubResource("BoxShape3D_4l5gn")

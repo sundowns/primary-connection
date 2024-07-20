@@ -24,7 +24,7 @@ var materials: Dictionary = {}
 
 func _ready():
 	generate_materials()
-	call_deferred("set_active_colour", Color.YELLOW)
+	call_deferred("set_active_colour", Color.MAGENTA)
 
 func generate_materials() -> void:
 	for colour in colours:

@@ -30,6 +30,7 @@ fire={
 [layer_names]
 
 3d_physics/layer_1="Targets"
+3d_physics/layer_2="Background"
 
 [rendering]
 
