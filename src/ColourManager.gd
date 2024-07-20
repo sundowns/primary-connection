@@ -78,3 +78,7 @@ func colour_changed(red_enabled: bool, green_enabled: bool, blue_enabled: bool) 
 		set_active_colour(ColourOption.BLUE)
 	else:
 		set_active_colour(ColourOption.BLACK)
+
+func get_random_colour() -> ColourOption:
+	var all_options: Array = colours.keys()
+	return all_options[randi_range(0, all_options.size()-1)]

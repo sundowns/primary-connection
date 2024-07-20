@@ -8,19 +8,24 @@
 [ext_resource type="Texture2D" uid="uid://bc2wn6ouprvty" path="res://assets/keyboard_e.svg" id="6_b2ikb"]
 
 [node name="ColourControls" type="MarginContainer"]
-custom_minimum_size = Vector2(250, 250)
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_bottom = 50
+custom_minimum_size = Vector2(600, 600)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -600.0
+offset_right = 600.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 150
 script = ExtResource("1_scv8i")
 
 [node name="Control" type="Control" parent="."]
-custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="Nodes" type="Control" parent="Control"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(350, 350)
 anchors_preset = 0
 offset_right = 150.0
 offset_bottom = 150.0
@@ -42,6 +47,7 @@ anchor_bottom = 1.0
 offset_left = -32.0
 offset_top = -64.0
 offset_right = 32.0
+offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 outline_image = ExtResource("3_387sb")
@@ -54,6 +60,7 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -64.0
+offset_right = 0.0
 offset_bottom = 64.0
 grow_horizontal = 0
 outline_image = ExtResource("5_go8ll")

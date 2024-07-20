@@ -6,9 +6,11 @@
 
 [node name="ColourControlNode" type="Control"]
 modulate = Color(1, 1, 1, 0.588235)
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 128.0
+offset_bottom = 128.0
 script = ExtResource("1_hfwl3")
 
 [node name="Enabled" type="Control" parent="."]
@@ -17,12 +19,12 @@ offset_right = 64.0
 offset_bottom = 64.0
 
 [node name="TextureRect" type="TextureRect" parent="Enabled"]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_t1ox7")
-stretch_mode = 3
+expand_mode = 4
 
 [node name="Disabled" type="Control" parent="."]
 custom_minimum_size = Vector2(64, 64)
@@ -31,9 +33,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Disabled"]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("3_u4u5n")
-stretch_mode = 3
+expand_mode = 4
