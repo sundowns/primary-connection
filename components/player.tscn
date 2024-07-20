@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://wmfpm5hfj3mu" path="res://components/blaster.tscn" id="1_dw6ge"]
 
 [node name="Player" type="Node3D"]
+metadata/_edit_group_ = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)

@@ -15,6 +15,10 @@ run/main_scene="res://Game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ColourManager="*res://src/ColourManager.gd"
+
 [rendering]
 
 anti_aliasing/quality/msaa_3d=2

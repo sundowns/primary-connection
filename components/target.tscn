@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2vf3wvi1vp7i"]
+
+[ext_resource type="Script" path="res://components/target.gd" id="1_4gnro"]
+[ext_resource type="PackedScene" uid="uid://divekxuftrc1g" path="res://assets/targetA.glb" id="1_mkihj"]
+[ext_resource type="Material" uid="uid://b1qh8cqnscqgv" path="res://materials/base_target_colour.tres" id="2_as8pt"]
+
+[node name="Target" type="CharacterBody3D"]
+script = ExtResource("1_4gnro")
+colour = Color(0, 1, 1, 1)
+
+[node name="targetA2" parent="." instance=ExtResource("1_mkihj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="targetA" parent="targetA2" index="0"]
+surface_material_override/0 = ExtResource("2_as8pt")
+
+[editable path="targetA2"]
