@@ -29,6 +29,7 @@ func _process(_delta: float) -> void:
 		target.look_at(player.global_position)
 
 func start_game() -> void:
+	spawn_targets() #TODO: not this
 	spawn_targets_timer.start()
 	LifeManager.start_game()
 

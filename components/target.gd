@@ -10,6 +10,8 @@ signal destroyed
 @onready var smoke_particles: GPUParticles3D = $SmokeParticles
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+@onready var explosion_effect_scene: PackedScene = preload("res://components/explosioneffect.tscn")
+
 @onready var begin_expiry_timer: Timer = $BeginExpiryTimer
 
 var is_starter_target: bool = false
@@ -52,5 +54,9 @@ func _on_begin_expiry_timer_timeout():
 	animation_player.play("Expire")
 
 func _on_expiry_animation_ended() -> void:
+	var explosion_effect: ExplosionEffect = explosion_effect_scene.instantiate()
+	explosion_effect.set_colour(colour)
+	DependencyHelper.retrieve("Effects").add_child(explosion_effect)
+	explosion_effect.global_position = global_position
 	LifeManager._on_target_self_destruct()
 	queue_free()

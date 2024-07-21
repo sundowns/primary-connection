@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://8eykrwyq0drh"]
+
+[ext_resource type="Script" path="res://components/explosioneffect.gd" id="1_86lmc"]
+[ext_resource type="Texture2D" uid="uid://cthky3muobpde" path="res://assets/star_08.png" id="1_gso56"]
+[ext_resource type="Texture2D" uid="uid://b444cddugtrvt" path="res://assets/star_04.png" id="2_2sigv"]
+[ext_resource type="Texture2D" uid="uid://dga62pg7nj7g1" path="res://assets/flare_01.png" id="2_itcnu"]
+[ext_resource type="Texture2D" uid="uid://chvmofebu72xw" path="res://assets/star_01.png" id="3_yp5x2"]
+[ext_resource type="Texture2D" uid="uid://bljwj3b4j7d7y" path="res://assets/star_07.png" id="4_ovy2l"]
+[ext_resource type="Texture2D" uid="uid://p0cdpvescbx0" path="res://assets/star_06.png" id="4_wogfo"]
+[ext_resource type="Texture2D" uid="uid://uwg38hyjabrh" path="res://assets/star_02.png" id="5_75yqv"]
+[ext_resource type="Texture2D" uid="uid://dvkuq52tglv5g" path="res://assets/star_09.png" id="6_s8oo5"]
+[ext_resource type="Texture2D" uid="uid://d3qv62x8d0y3e" path="res://assets/star_03.png" id="10_n30h3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sa0go"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("2_itcnu")
+}, {
+"duration": 2.0,
+"texture": ExtResource("1_gso56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2sigv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yp5x2")
+}, {
+"duration": 1.25,
+"texture": ExtResource("4_ovy2l")
+}, {
+"duration": 1.25,
+"texture": ExtResource("4_wogfo")
+}, {
+"duration": 1.25,
+"texture": ExtResource("6_s8oo5")
+}, {
+"duration": 0.6,
+"texture": ExtResource("5_75yqv")
+}, {
+"duration": 0.6,
+"texture": ExtResource("10_n30h3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="ExplosionEffect" type="Node3D"]
+script = ExtResource("1_86lmc")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+cast_shadow = 0
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_sa0go")
+autoplay = "default"
+frame = 8
+frame_progress = 1.0
+speed_scale = 1.5
+
+[connection signal="animation_finished" from="AnimatedSprite3D" to="." method="_on_animated_sprite_3d_animation_finished"]
