@@ -15,4 +15,4 @@ func _on_active_colour_changed(new_active_colour: ColourManager.ColourOption) ->
 func _on_game_end():
 	visible = false
 	set_process(false)
-	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_CONFINED)
+	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_VISIBLE)
