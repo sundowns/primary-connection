@@ -1,0 +1,339 @@
+[gd_scene load_steps=102 format=3 uid="uid://dfmnn20ktexsl"]
+
+[ext_resource type="PackedScene" uid="uid://b0olf0wexhlbx" path="res://assets/gridmap/balcony-floor-center.glb" id="1_4g60y"]
+[ext_resource type="PackedScene" uid="uid://dmaf2ii2k33ow" path="res://assets/gridmap/balcony-floor-corner.glb" id="2_1q7o0"]
+[ext_resource type="PackedScene" uid="uid://b37c0tggfnaea" path="res://assets/gridmap/balcony-floor.glb" id="3_gypbd"]
+[ext_resource type="PackedScene" uid="uid://dxkqis4au4tb7" path="res://assets/gridmap/balcony-rail-center.glb" id="4_scdsr"]
+[ext_resource type="PackedScene" uid="uid://bjbjds8ofusxc" path="res://assets/gridmap/balcony-rail-corner.glb" id="5_jdda5"]
+[ext_resource type="PackedScene" uid="uid://dy5xp2yrel57j" path="res://assets/gridmap/balcony-rail.glb" id="6_kko7v"]
+[ext_resource type="PackedScene" uid="uid://covsegdm8jg5h" path="res://assets/gridmap/bed-double-cover.glb" id="7_4mmg6"]
+[ext_resource type="PackedScene" uid="uid://ul88tjrdt2m5" path="res://assets/gridmap/bed-double.glb" id="8_3sly1"]
+[ext_resource type="PackedScene" uid="uid://cmgxrohhjc1gx" path="res://assets/gridmap/bed-single-cover.glb" id="9_etj4n"]
+[ext_resource type="PackedScene" uid="uid://wk3tiuaqx3gf" path="res://assets/gridmap/bed-single.glb" id="10_f5u3i"]
+[ext_resource type="PackedScene" uid="uid://088yxoas2jh4" path="res://assets/gridmap/chair-armrest-headrest.glb" id="11_obyd4"]
+[ext_resource type="PackedScene" uid="uid://dadlydwh1l0tk" path="res://assets/gridmap/chair-armrest.glb" id="12_6tcrl"]
+[ext_resource type="PackedScene" uid="uid://d15aaarywwii2" path="res://assets/gridmap/chair-cushion-headrest.glb" id="13_imwca"]
+[ext_resource type="PackedScene" uid="uid://rfaj0qx46xg2" path="res://assets/gridmap/chair-cushion.glb" id="14_fi4hy"]
+[ext_resource type="PackedScene" uid="uid://d2qu48ogl4rtq" path="res://assets/gridmap/chair-headrest.glb" id="15_01qup"]
+[ext_resource type="PackedScene" uid="uid://cepigrq7kw5a6" path="res://assets/gridmap/chair.glb" id="16_ulp1a"]
+[ext_resource type="PackedScene" uid="uid://dvo0qwe1x7w87" path="res://assets/gridmap/computer-screen.glb" id="17_oqcci"]
+[ext_resource type="PackedScene" uid="uid://dk1hodcn66fx4" path="res://assets/gridmap/computer-system.glb" id="18_goioc"]
+[ext_resource type="PackedScene" uid="uid://0ulp8sncfy0f" path="res://assets/gridmap/computer-wide.glb" id="19_7dhj8"]
+[ext_resource type="PackedScene" uid="uid://df1tslioku488" path="res://assets/gridmap/computer.glb" id="20_27md8"]
+[ext_resource type="PackedScene" uid="uid://dnca4nqugcfm5" path="res://assets/gridmap/container-flat-open.glb" id="21_xbosq"]
+[ext_resource type="PackedScene" uid="uid://bx05t3em0ythb" path="res://assets/gridmap/container-flat.glb" id="22_k1mp8"]
+[ext_resource type="PackedScene" uid="uid://beyf2nc4mlpef" path="res://assets/gridmap/container-tall.glb" id="23_h4yi1"]
+[ext_resource type="PackedScene" uid="uid://d23dbmbn0bhj3" path="res://assets/gridmap/container-wide.glb" id="24_y0ujf"]
+[ext_resource type="PackedScene" uid="uid://c5q1asdrdbkw5" path="res://assets/gridmap/container.glb" id="25_fccp1"]
+[ext_resource type="PackedScene" uid="uid://dgmv2xodtn2tn" path="res://assets/gridmap/display-wall-wide.glb" id="26_axohs"]
+[ext_resource type="PackedScene" uid="uid://dmes3ic3ev7s6" path="res://assets/gridmap/display-wall.glb" id="27_ac5va"]
+[ext_resource type="PackedScene" uid="uid://iocc7vbvaimi" path="res://assets/gridmap/door-double-closed.glb" id="28_axy5u"]
+[ext_resource type="PackedScene" uid="uid://brydugw4k1c2h" path="res://assets/gridmap/door-double-half.glb" id="29_aypjm"]
+[ext_resource type="PackedScene" uid="uid://chcl7cdb5qqpa" path="res://assets/gridmap/door-double.glb" id="30_dwgim"]
+[ext_resource type="PackedScene" uid="uid://bqt8g5p4bcp4" path="res://assets/gridmap/door-single-closed.glb" id="31_3ow5m"]
+[ext_resource type="PackedScene" uid="uid://cjq8ytd23vk3n" path="res://assets/gridmap/door-single-half.glb" id="32_mxx14"]
+[ext_resource type="PackedScene" uid="uid://bb8g6rbf4kv17" path="res://assets/gridmap/door-single.glb" id="33_psv0e"]
+[ext_resource type="PackedScene" uid="uid://bpdnvj8hby4jp" path="res://assets/gridmap/floor-corner.glb" id="34_x53nf"]
+[ext_resource type="PackedScene" uid="uid://bf36lb5ivdqnd" path="res://assets/gridmap/floor-detail.glb" id="35_wtssj"]
+[ext_resource type="PackedScene" uid="uid://bk1uug2y3k67o" path="res://assets/gridmap/floor-panel-corner.glb" id="36_g8fgx"]
+[ext_resource type="PackedScene" uid="uid://c2gbvjcmp1lij" path="res://assets/gridmap/floor-panel-end.glb" id="37_wq2bu"]
+[ext_resource type="PackedScene" uid="uid://bkux4jmsv2typ" path="res://assets/gridmap/floor-panel-straight.glb" id="38_hc3he"]
+[ext_resource type="PackedScene" uid="uid://cq0xf1ha0161r" path="res://assets/gridmap/floor-panel.glb" id="39_yjv2f"]
+[ext_resource type="PackedScene" uid="uid://bk6vbbxsos4qn" path="res://assets/gridmap/floor.glb" id="40_ylaxt"]
+[ext_resource type="Texture2D" uid="uid://b388urmeounj2" path="res://assets/gridmap/Textures/colormap.png" id="41_s2gfq"]
+[ext_resource type="PackedScene" uid="uid://xj4e5sa2j04e" path="res://assets/gridmap/pipe-bend-diagonal.glb" id="41_y4654"]
+[ext_resource type="PackedScene" uid="uid://d0ceqnnoyavbn" path="res://assets/gridmap/pipe-bend.glb" id="42_jcre7"]
+[ext_resource type="PackedScene" uid="uid://c06cnby7y3hdw" path="res://assets/gridmap/pipe-end-colored.glb" id="43_i7cct"]
+[ext_resource type="PackedScene" uid="uid://bkb1d8swubn8s" path="res://assets/gridmap/pipe-end.glb" id="44_ebv4b"]
+[ext_resource type="PackedScene" uid="uid://c5p5vufmv4dtq" path="res://assets/gridmap/pipe-ring-colored.glb" id="45_ocadt"]
+[ext_resource type="PackedScene" uid="uid://ceujq8qrf48do" path="res://assets/gridmap/pipe-ring.glb" id="46_m1cba"]
+[ext_resource type="PackedScene" uid="uid://cm5u26mysl42i" path="res://assets/gridmap/pipe.glb" id="47_pyakq"]
+[ext_resource type="PackedScene" uid="uid://caxlda6bfcwx1" path="res://assets/gridmap/rail-narrow.glb" id="48_7i5x6"]
+[ext_resource type="PackedScene" uid="uid://b7w8if4tjn7t" path="res://assets/gridmap/rail.glb" id="49_eanns"]
+[ext_resource type="PackedScene" uid="uid://dhdilmbnttlft" path="res://assets/gridmap/rocks.glb" id="50_36gs4"]
+[ext_resource type="PackedScene" uid="uid://b0g4fiww6ddcd" path="res://assets/gridmap/skip-rocks.glb" id="51_dhw57"]
+[ext_resource type="PackedScene" uid="uid://dfskbg7qi6fwh" path="res://assets/gridmap/skip.glb" id="52_wja7v"]
+[ext_resource type="PackedScene" uid="uid://ote5ehsy5483" path="res://assets/gridmap/stairs-corner-inner.glb" id="53_ds3nd"]
+[ext_resource type="PackedScene" uid="uid://cei4t4eip1gfn" path="res://assets/gridmap/stairs-corner.glb" id="54_yh57m"]
+[ext_resource type="PackedScene" uid="uid://56fl0f8bl8lp" path="res://assets/gridmap/stairs-handrail-single.glb" id="55_bjr2f"]
+[ext_resource type="PackedScene" uid="uid://dlhhrjefxv4dn" path="res://assets/gridmap/stairs-handrail.glb" id="56_yciq7"]
+[ext_resource type="PackedScene" uid="uid://c8wlynw6nflx2" path="res://assets/gridmap/stairs-ramp.glb" id="57_acdnv"]
+[ext_resource type="PackedScene" uid="uid://o5jgloeuem7e" path="res://assets/gridmap/stairs-small-center.glb" id="58_ebvtr"]
+[ext_resource type="PackedScene" uid="uid://c64wh3fk8b58p" path="res://assets/gridmap/stairs-small-corner-inner.glb" id="59_g8jj7"]
+[ext_resource type="PackedScene" uid="uid://bw4wpfqc32jtg" path="res://assets/gridmap/stairs-small-corner.glb" id="60_vtmvg"]
+[ext_resource type="PackedScene" uid="uid://sct0em8ixn5r" path="res://assets/gridmap/stairs-small-edge-handrail.glb" id="61_ndmmh"]
+[ext_resource type="PackedScene" uid="uid://b8ktmrqtb14v6" path="res://assets/gridmap/stairs-small-edge.glb" id="62_1mff4"]
+[ext_resource type="PackedScene" uid="uid://no4ys8b3w4xu" path="res://assets/gridmap/stairs-small-edges-handrail.glb" id="63_sg2v4"]
+[ext_resource type="PackedScene" uid="uid://hsuuk668gli1" path="res://assets/gridmap/stairs-small-edges.glb" id="64_rgjby"]
+[ext_resource type="PackedScene" uid="uid://balxlbmud2w5f" path="res://assets/gridmap/stairs.glb" id="65_ync2f"]
+[ext_resource type="PackedScene" uid="uid://co4ha2u6auqls" path="res://assets/gridmap/structure-barrier-high.glb" id="66_b4cgs"]
+[ext_resource type="PackedScene" uid="uid://s5iwnslwhwm0" path="res://assets/gridmap/structure-barrier.glb" id="67_5lptg"]
+[ext_resource type="PackedScene" uid="uid://brj5lewr632hc" path="res://assets/gridmap/structure-panel.glb" id="68_8eomw"]
+[ext_resource type="PackedScene" uid="uid://dnft2lxd3uf3a" path="res://assets/gridmap/structure.glb" id="69_p4pjy"]
+[ext_resource type="PackedScene" uid="uid://dedj2iyduqryu" path="res://assets/gridmap/table-display-planet.glb" id="70_egasb"]
+[ext_resource type="PackedScene" uid="uid://cixof0yn8griw" path="res://assets/gridmap/table-display-small.glb" id="71_33tlt"]
+[ext_resource type="PackedScene" uid="uid://brv1ya4tplu17" path="res://assets/gridmap/table-display.glb" id="72_v62wk"]
+[ext_resource type="PackedScene" uid="uid://dhndwxcgltv3t" path="res://assets/gridmap/table-inset-small.glb" id="73_e37yd"]
+[ext_resource type="PackedScene" uid="uid://bwg4p8c4gjy3o" path="res://assets/gridmap/table-inset.glb" id="74_7vnv3"]
+[ext_resource type="PackedScene" uid="uid://4rgsh3gb13ap" path="res://assets/gridmap/table-large.glb" id="75_mrlf0"]
+[ext_resource type="PackedScene" uid="uid://dlkxtm7os6bc8" path="res://assets/gridmap/table.glb" id="76_y7hvj"]
+[ext_resource type="PackedScene" uid="uid://nkxmqltsolfk" path="res://assets/gridmap/wall-banner.glb" id="77_yac0k"]
+[ext_resource type="PackedScene" uid="uid://daty2kb7nsd04" path="res://assets/gridmap/wall-corner-banner.glb" id="78_saamk"]
+[ext_resource type="PackedScene" uid="uid://bkx85t7qcxub2" path="res://assets/gridmap/wall-corner-round-banner.glb" id="79_jykw8"]
+[ext_resource type="PackedScene" uid="uid://blf1jfc4lc1kr" path="res://assets/gridmap/wall-corner-round.glb" id="80_mjque"]
+[ext_resource type="PackedScene" uid="uid://dir0dhqucabki" path="res://assets/gridmap/wall-corner.glb" id="81_n2msp"]
+[ext_resource type="PackedScene" uid="uid://dvl2kuqhp5dkq" path="res://assets/gridmap/wall-detail.glb" id="82_7f08i"]
+[ext_resource type="PackedScene" uid="uid://bdnsj3scgi7rp" path="res://assets/gridmap/wall-door-banner.glb" id="83_1mpkf"]
+[ext_resource type="PackedScene" uid="uid://bloo62gm1pbo6" path="res://assets/gridmap/wall-door-center.glb" id="84_i4215"]
+[ext_resource type="PackedScene" uid="uid://drhp5fts17v4t" path="res://assets/gridmap/wall-door-edge-banner.glb" id="85_j4p0n"]
+[ext_resource type="PackedScene" uid="uid://ev8qh05ebx5x" path="res://assets/gridmap/wall-door-edge.glb" id="86_lr3lh"]
+[ext_resource type="PackedScene" uid="uid://cckd1sxkecroe" path="res://assets/gridmap/wall-door-wide-banner.glb" id="87_rdftr"]
+[ext_resource type="PackedScene" uid="uid://c8ijwh8tab7vf" path="res://assets/gridmap/wall-door-wide.glb" id="88_4oyg0"]
+[ext_resource type="PackedScene" uid="uid://cdg3sqd6kr564" path="res://assets/gridmap/wall-door.glb" id="89_07fj4"]
+[ext_resource type="PackedScene" uid="uid://dykng6ab2clms" path="res://assets/gridmap/wall-pillar-banner.glb" id="90_dmd76"]
+[ext_resource type="PackedScene" uid="uid://bj4axoth3hqw8" path="res://assets/gridmap/wall-pillar.glb" id="91_xq4fk"]
+[ext_resource type="PackedScene" uid="uid://c6mthspom413l" path="res://assets/gridmap/wall-switch.glb" id="92_gk2wn"]
+[ext_resource type="PackedScene" uid="uid://dwiyykwunfn5m" path="res://assets/gridmap/wall-window-banner.glb" id="93_leixq"]
+[ext_resource type="PackedScene" uid="uid://detssjpttekmc" path="res://assets/gridmap/wall-window-frame.glb" id="94_146qp"]
+[ext_resource type="PackedScene" uid="uid://dt0tcl6ev2lmj" path="res://assets/gridmap/wall-window-shutters.glb" id="95_84aef"]
+[ext_resource type="PackedScene" uid="uid://dqw2iwpkfjpvj" path="res://assets/gridmap/wall-window.glb" id="96_ewvmx"]
+[ext_resource type="PackedScene" uid="uid://bb3iluki2ujsx" path="res://assets/gridmap/wall.glb" id="97_bpp5d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_scwlc"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("41_s2gfq")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ycw8v"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 0.3, 1.00001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(2, 0, 0, 0, 1, 0, 1, 0, 3, 0, 2, 0, 2, 0, 3, 0, 4, 0, 4, 0, 5, 0, 2, 0, 6, 0, 0, 0, 2, 0, 2, 0, 5, 0, 6, 0, 6, 0, 7, 0, 1, 0, 1, 0, 0, 0, 6, 0, 4, 0, 3, 0, 1, 0, 1, 0, 7, 0, 4, 0, 4, 0, 7, 0, 6, 0, 6, 0, 5, 0, 4, 0),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 254, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 254, 255, 255, 255, 254, 255, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4asu7"]
+resource_name = "floor_floor"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 0.3, 1.00001),
+"attribute_data": PackedByteArray(255, 55, 152, 249, 255, 55, 152, 249, 255, 55, 152, 249, 255, 55, 152, 249, 255, 55, 152, 249, 255, 55, 101, 198, 255, 55, 152, 249, 255, 55, 101, 198, 255, 55, 152, 249, 255, 55, 152, 249, 255, 55, 101, 198, 255, 55, 101, 198, 255, 55, 101, 198, 255, 55, 152, 249, 255, 55, 101, 198, 255, 55, 152, 249, 255, 55, 152, 249, 255, 55, 152, 249, 255, 55, 101, 198, 255, 55, 101, 198, 255, 87, 101, 198, 255, 87, 101, 198, 255, 87, 101, 198, 255, 87, 101, 198),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(2, 0, 0, 0, 1, 0, 1, 0, 3, 0, 2, 0, 6, 0, 4, 0, 5, 0, 5, 0, 7, 0, 6, 0, 10, 0, 8, 0, 9, 0, 9, 0, 11, 0, 10, 0, 14, 0, 12, 0, 13, 0, 13, 0, 15, 0, 14, 0, 18, 0, 16, 0, 17, 0, 17, 0, 19, 0, 18, 0, 22, 0, 20, 0, 21, 0, 21, 0, 23, 0, 22, 0),
+"material": SubResource("StandardMaterial3D_scwlc"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 254, 255, 255, 191, 254, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 255, 191, 254, 255, 0, 0, 254, 255, 0, 128, 0, 0, 0, 0, 254, 255, 0, 128, 254, 255, 255, 255, 254, 255, 0, 128, 0, 0, 255, 255, 254, 255, 0, 128, 254, 255, 255, 255, 0, 0, 255, 191, 254, 255, 0, 0, 0, 0, 255, 191, 254, 255, 255, 255, 254, 255, 255, 191, 254, 255, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191, 255, 127, 255, 191)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ycw8v")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="balcony-floor-center2" parent="." instance=ExtResource("1_4g60y")]
+
+[node name="balcony-floor-corner2" parent="." instance=ExtResource("2_1q7o0")]
+
+[node name="balcony-floor2" parent="." instance=ExtResource("3_gypbd")]
+
+[node name="balcony-rail-center2" parent="." instance=ExtResource("4_scdsr")]
+
+[node name="balcony-rail-corner2" parent="." instance=ExtResource("5_jdda5")]
+
+[node name="balcony-rail2" parent="." instance=ExtResource("6_kko7v")]
+
+[node name="bed-double-cover2" parent="." instance=ExtResource("7_4mmg6")]
+
+[node name="bed-double2" parent="." instance=ExtResource("8_3sly1")]
+
+[node name="bed-single-cover2" parent="." instance=ExtResource("9_etj4n")]
+
+[node name="bed-single2" parent="." instance=ExtResource("10_f5u3i")]
+
+[node name="chair-armrest-headrest2" parent="." instance=ExtResource("11_obyd4")]
+
+[node name="chair-armrest2" parent="." instance=ExtResource("12_6tcrl")]
+
+[node name="chair-cushion-headrest2" parent="." instance=ExtResource("13_imwca")]
+
+[node name="chair-cushion2" parent="." instance=ExtResource("14_fi4hy")]
+
+[node name="chair-headrest2" parent="." instance=ExtResource("15_01qup")]
+
+[node name="chair2" parent="." instance=ExtResource("16_ulp1a")]
+
+[node name="computer-screen2" parent="." instance=ExtResource("17_oqcci")]
+
+[node name="computer-system2" parent="." instance=ExtResource("18_goioc")]
+
+[node name="computer-wide2" parent="." instance=ExtResource("19_7dhj8")]
+
+[node name="computer2" parent="." instance=ExtResource("20_27md8")]
+
+[node name="container-flat-open2" parent="." instance=ExtResource("21_xbosq")]
+
+[node name="container-flat2" parent="." instance=ExtResource("22_k1mp8")]
+
+[node name="container-tall2" parent="." instance=ExtResource("23_h4yi1")]
+
+[node name="container-wide2" parent="." instance=ExtResource("24_y0ujf")]
+
+[node name="container2" parent="." instance=ExtResource("25_fccp1")]
+
+[node name="display-wall-wide2" parent="." instance=ExtResource("26_axohs")]
+
+[node name="display-wall2" parent="." instance=ExtResource("27_ac5va")]
+
+[node name="door-double-closed2" parent="." instance=ExtResource("28_axy5u")]
+
+[node name="door-double-half2" parent="." instance=ExtResource("29_aypjm")]
+
+[node name="door-double2" parent="." instance=ExtResource("30_dwgim")]
+
+[node name="door-single-closed2" parent="." instance=ExtResource("31_3ow5m")]
+
+[node name="door-single-half2" parent="." instance=ExtResource("32_mxx14")]
+
+[node name="door-single2" parent="." instance=ExtResource("33_psv0e")]
+
+[node name="floor-corner2" parent="." instance=ExtResource("34_x53nf")]
+
+[node name="floor-detail2" parent="." instance=ExtResource("35_wtssj")]
+
+[node name="floor-panel-corner2" parent="." instance=ExtResource("36_g8fgx")]
+
+[node name="floor-panel-end2" parent="." instance=ExtResource("37_wq2bu")]
+
+[node name="floor-panel-straight2" parent="." instance=ExtResource("38_hc3he")]
+
+[node name="floor-panel2" parent="." instance=ExtResource("39_yjv2f")]
+
+[node name="floor2" parent="." instance=ExtResource("40_ylaxt")]
+
+[node name="floor" parent="floor2" index="0"]
+mesh = SubResource("ArrayMesh_4asu7")
+
+[node name="pipe-bend-diagonal2" parent="." instance=ExtResource("41_y4654")]
+
+[node name="pipe-bend2" parent="." instance=ExtResource("42_jcre7")]
+
+[node name="pipe-end-colored2" parent="." instance=ExtResource("43_i7cct")]
+
+[node name="pipe-end2" parent="." instance=ExtResource("44_ebv4b")]
+
+[node name="pipe-ring-colored2" parent="." instance=ExtResource("45_ocadt")]
+
+[node name="pipe-ring2" parent="." instance=ExtResource("46_m1cba")]
+
+[node name="pipe2" parent="." instance=ExtResource("47_pyakq")]
+
+[node name="rail-narrow2" parent="." instance=ExtResource("48_7i5x6")]
+
+[node name="rail2" parent="." instance=ExtResource("49_eanns")]
+
+[node name="rocks2" parent="." instance=ExtResource("50_36gs4")]
+
+[node name="skip-rocks2" parent="." instance=ExtResource("51_dhw57")]
+
+[node name="skip2" parent="." instance=ExtResource("52_wja7v")]
+
+[node name="stairs-corner-inner2" parent="." instance=ExtResource("53_ds3nd")]
+
+[node name="stairs-corner2" parent="." instance=ExtResource("54_yh57m")]
+
+[node name="stairs-handrail-single2" parent="." instance=ExtResource("55_bjr2f")]
+
+[node name="stairs-handrail2" parent="." instance=ExtResource("56_yciq7")]
+
+[node name="stairs-ramp2" parent="." instance=ExtResource("57_acdnv")]
+
+[node name="stairs-small-center2" parent="." instance=ExtResource("58_ebvtr")]
+
+[node name="stairs-small-corner-inner2" parent="." instance=ExtResource("59_g8jj7")]
+
+[node name="stairs-small-corner2" parent="." instance=ExtResource("60_vtmvg")]
+
+[node name="stairs-small-edge-handrail2" parent="." instance=ExtResource("61_ndmmh")]
+
+[node name="stairs-small-edge2" parent="." instance=ExtResource("62_1mff4")]
+
+[node name="stairs-small-edges-handrail2" parent="." instance=ExtResource("63_sg2v4")]
+
+[node name="stairs-small-edges2" parent="." instance=ExtResource("64_rgjby")]
+
+[node name="stairs2" parent="." instance=ExtResource("65_ync2f")]
+
+[node name="structure-barrier-high" parent="." instance=ExtResource("66_b4cgs")]
+
+[node name="structure-barrier" parent="." instance=ExtResource("67_5lptg")]
+
+[node name="structure-panel2" parent="." instance=ExtResource("68_8eomw")]
+
+[node name="structure" parent="." instance=ExtResource("69_p4pjy")]
+
+[node name="table-display-planet2" parent="." instance=ExtResource("70_egasb")]
+
+[node name="table-display-small2" parent="." instance=ExtResource("71_33tlt")]
+
+[node name="table-display2" parent="." instance=ExtResource("72_v62wk")]
+
+[node name="table-inset-small2" parent="." instance=ExtResource("73_e37yd")]
+
+[node name="table-inset2" parent="." instance=ExtResource("74_7vnv3")]
+
+[node name="table-large2" parent="." instance=ExtResource("75_mrlf0")]
+
+[node name="table2" parent="." instance=ExtResource("76_y7hvj")]
+
+[node name="wall-banner2" parent="." instance=ExtResource("77_yac0k")]
+
+[node name="wall-corner-banner2" parent="." instance=ExtResource("78_saamk")]
+
+[node name="wall-corner-round-banner2" parent="." instance=ExtResource("79_jykw8")]
+
+[node name="wall-corner-round2" parent="." instance=ExtResource("80_mjque")]
+
+[node name="wall-corner2" parent="." instance=ExtResource("81_n2msp")]
+
+[node name="wall-detail2" parent="." instance=ExtResource("82_7f08i")]
+
+[node name="wall-door-banner2" parent="." instance=ExtResource("83_1mpkf")]
+
+[node name="wall-door-center2" parent="." instance=ExtResource("84_i4215")]
+
+[node name="wall-door-edge-banner2" parent="." instance=ExtResource("85_j4p0n")]
+
+[node name="wall-door-edge2" parent="." instance=ExtResource("86_lr3lh")]
+
+[node name="wall-door-wide-banner2" parent="." instance=ExtResource("87_rdftr")]
+
+[node name="wall-door-wide2" parent="." instance=ExtResource("88_4oyg0")]
+
+[node name="wall-door2" parent="." instance=ExtResource("89_07fj4")]
+
+[node name="wall-pillar-banner2" parent="." instance=ExtResource("90_dmd76")]
+
+[node name="wall-pillar2" parent="." instance=ExtResource("91_xq4fk")]
+
+[node name="wall-switch2" parent="." instance=ExtResource("92_gk2wn")]
+
+[node name="wall-window-banner2" parent="." instance=ExtResource("93_leixq")]
+
+[node name="wall-window-frame2" parent="." instance=ExtResource("94_146qp")]
+
+[node name="wall-window-shutters2" parent="." instance=ExtResource("95_84aef")]
+
+[node name="wall-window2" parent="." instance=ExtResource("96_ewvmx")]
+
+[node name="wall2" parent="." instance=ExtResource("97_bpp5d")]
+
+[editable path="floor2"]
