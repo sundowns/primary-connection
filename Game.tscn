@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://k3rsi41hyjlo"]
+[gd_scene load_steps=9 format=3 uid="uid://k3rsi41hyjlo"]
 
 [ext_resource type="PackedScene" uid="uid://cco6xg16mekua" path="res://components/player.tscn" id="1_cynns"]
 [ext_resource type="Script" path="res://Game.gd" id="1_ihufm"]
@@ -6,6 +6,7 @@
 [ext_resource type="MeshLibrary" uid="uid://j18a5m4ej2m5" path="res://assets/gridmap/SpaceStationMeshLibrary.tres" id="3_woa2m"]
 [ext_resource type="PackedScene" uid="uid://b52ubnjfv5hcg" path="res://ui/colour_controls.tscn" id="5_amdyr"]
 [ext_resource type="PackedScene" uid="uid://cfwu8aeu0orn6" path="res://ui/life_counter.tscn" id="6_yle7a"]
+[ext_resource type="PackedScene" uid="uid://cyt8vd5vc4rwv" path="res://ui/game_over_screen.tscn" id="7_62s4u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4l5gn"]
 size = Vector3(1000, 1000, 1)
@@ -105,6 +106,8 @@ offset_left = -50.0
 offset_right = 50.0
 offset_bottom = 100.0
 grow_horizontal = 2
+
+[node name="GameOverScreen" parent="UI" instance=ExtResource("7_62s4u")]
 
 [connection signal="timeout" from="SpawnTargetsInterval" to="." method="_on_spawn_targets_interval_timeout"]
 

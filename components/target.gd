@@ -39,6 +39,7 @@ func handle_correct_colour_hit() -> void:
 	shatter_particles.global_position = global_position
 	shatter_particles.emitting = true
 	destroyed.emit()
+	LifeManager.targets_destroyed += 1
 	queue_free()
 
 func handle_wrong_colour_hit() -> void:

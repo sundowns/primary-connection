@@ -147,7 +147,6 @@ process_material = ExtResource("4_mlmb5")
 draw_pass_1 = SubResource("PrismMesh_mj1t7")
 
 [node name="BeginExpiryTimer" type="Timer" parent="."]
-wait_time = 7.0
 one_shot = true
 autostart = true
 

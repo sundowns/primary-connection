@@ -6,6 +6,7 @@ signal game_over
 const starting_lives: int = 3
 var current_lives: float = 0
 
+var targets_destroyed: int = 0
 var time_elapsed: float = 0.0
 var is_running: bool = false
 
@@ -15,6 +16,7 @@ func _ready() -> void:
 func start_game() -> void:
 	current_lives = starting_lives
 	time_elapsed = 0.0
+	targets_destroyed = 0
 	is_running = true
 	set_process(true)
 

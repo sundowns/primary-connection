@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyt8vd5vc4rwv"]
+
+[ext_resource type="Script" path="res://ui/game_over_screen.gd" id="1_pmxho"]
+[ext_resource type="FontFile" uid="uid://jncfxtbjxum0" path="res://assets/Kenney Future.ttf" id="2_p6tbr"]
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pmxho")
+
+[node name="MarginContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="MarginContainer"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.368627)
+
+[node name="ThanksForPlaying" type="Label" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -172.0
+offset_top = 29.0
+offset_right = 172.0
+offset_bottom = 83.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_p6tbr")
+theme_override_font_sizes/font_size = 48
+text = "Game Over"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -25.0
+offset_right = 20.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="ElapsedTime" type="RichTextLabel" parent="MarginContainer/Control/VBoxContainer/CenterContainer2"]
+custom_minimum_size = Vector2(380, 50)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_p6tbr")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "You survived for [color=green]100 m, 50 s[/color]"
+fit_content = true
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="TargetsDestroyed" type="RichTextLabel" parent="MarginContainer/Control/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(350, 60)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_p6tbr")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Targets destroyed: [color=green]9000[/color]"
+
+[node name="LinkButton" type="LinkButton" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -40.0
+offset_right = 49.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "GitHub Repo"
+uri = "https://github.com/sundowns/primary-connection"
