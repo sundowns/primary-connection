@@ -70,12 +70,19 @@ func update_spawn_interval(elapsed: float) -> void:
 	current_spawn_interval = maxf(new_interval, minimum_spawn_interval)
 
 func update_spawn_count(elapsed: float) -> void:
-	if elapsed > 60:
+	if elapsed > 45:
 		current_maximum_spawn_count = 2
-	if elapsed > 300:
+	if elapsed > 250:
 		current_maximum_spawn_count = 3
 	if elapsed > 600:
 		current_maximum_spawn_count = 4
+	
+	if elapsed > 150:
+		current_minimum_spawn_count = 2
+	if elapsed > 400:
+		current_minimum_spawn_count = 3
+	if elapsed > 500:
+		current_minimum_spawn_count = 4
 
 func _process(_delta: float) -> void:
 	update_spawn_interval(LifeManager.time_elapsed)
