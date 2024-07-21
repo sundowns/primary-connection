@@ -3,7 +3,7 @@ extends Node
 signal life_lost()
 signal game_over
 
-const starting_lives: int = 10
+const starting_lives: int = 3
 var current_lives: float = 0
 
 var targets_destroyed: int = 0
@@ -30,5 +30,6 @@ func _on_target_self_destruct() -> void:
 	current_lives -= 1
 	life_lost.emit()
 	if current_lives <= 0:
-		game_over.emit()
 		is_running = false
+		await get_tree().create_timer(0.3).timeout
+		game_over.emit()

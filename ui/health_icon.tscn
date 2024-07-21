@@ -1,11 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://3atiejjbaa1q"]
+[gd_scene load_steps=6 format=3 uid="uid://3atiejjbaa1q"]
 
 [ext_resource type="Texture2D" uid="uid://d1rt6bkvpfk2s" path="res://assets/suit_hearts.svg" id="1_xh3r2"]
 [ext_resource type="Script" path="res://ui/health_icon.gd" id="2_l340b"]
 
-[node name="HealthIcon" type="TextureRect"]
+[sub_resource type="Animation" id="Animation_s41q4"]
+resource_name = "Shake"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-10, -6), Vector2(7, 6), Vector2(-4, 5), Vector2(5, -4), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ok4fy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bu774"]
+_data = {
+"RESET": SubResource("Animation_ok4fy"),
+"Shake": SubResource("Animation_s41q4")
+}
+
+[node name="HealthIcon" type="Control"]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 80.0
+script = ExtResource("2_l340b")
+
+[node name="TextureRect" type="TextureRect" parent="."]
 self_modulate = Color(0.39, 0.39, 0.39, 1)
-scale = Vector2(2, 2)
+offset_right = 50.0
+offset_bottom = 40.0
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_xh3r2")
 stretch_mode = 3
-script = ExtResource("2_l340b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bu774")
+}

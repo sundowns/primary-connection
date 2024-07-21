@@ -61,7 +61,6 @@ func _on_starter_target_destroyed() -> void:
 	start_game()
 
 func _on_game_over() -> void:
-	print('game over')
 	game_is_over = true
 	player.is_disabled = true
 	spawn_targets_timer.stop()
