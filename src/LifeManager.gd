@@ -30,4 +30,3 @@ func _on_target_self_destruct() -> void:
 	if current_lives <= 0:
 		game_over.emit()
 		is_running = false
-		print('game over')

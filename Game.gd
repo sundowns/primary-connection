@@ -11,12 +11,16 @@ const max_target_count: int = 5
 
 var target_scene: PackedScene = preload("res://components/target.tscn")
 
+var game_is_over: bool = false
+
 func _ready():
 	DependencyHelper.store("Effects", effects_anchor) #🤠
 	create_starter_target()
 	life_counter.initialise()
+	LifeManager.game_over.connect(self._on_game_over)
 
 func _input(event: InputEvent):
+	if game_is_over: return
 	if event.is_action_pressed("fire"):
 		player.fire_at_point_on_screen(get_viewport().get_mouse_position())
 
@@ -32,6 +36,7 @@ func _on_spawn_targets_interval_timeout():
 	spawn_targets()
 
 func spawn_targets() -> void:
+	if game_is_over: return
 	var current_target_count: int = target_anchor.get_child_count()
 	if current_target_count < max_target_count:
 		# spawn some new baddies
@@ -53,3 +58,10 @@ func create_starter_target() -> void:
 
 func _on_starter_target_destroyed() -> void:
 	start_game()
+
+func _on_game_over() -> void:
+	print('game over')
+	game_is_over = true
+	player.is_disabled = true
+	spawn_targets_timer.stop()
+	Engine.time_scale = 0

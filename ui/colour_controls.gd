@@ -11,6 +11,7 @@ class_name ColourControls
 @onready var blue_connection: TextureRect = $Control/Nodes/Overlays/Connections/BlueConnection
 
 func _ready():
+	LifeManager.game_over.connect(self._on_game_over)
 	call_deferred("colours_changed")
 	ColourManager.active_colour_changed.connect(self._on_active_colour_change)
 	red_connection.self_modulate = ColourManager.colours[ColourManager.ColourOption.RED]
@@ -33,7 +34,6 @@ func _input(event: InputEvent):
 
 func colours_changed() -> void:
 	ColourManager.colour_changed(red_node.is_enabled, yellow_node.is_enabled, blue_node.is_enabled)
-	# TODO: update the connections and probably some central pretty thing to show colour
 
 func _on_active_colour_change(new_colour: ColourManager.ColourOption) -> void:
 	var colour: Color = ColourManager.colours[new_colour]
@@ -44,4 +44,6 @@ func _on_active_colour_change(new_colour: ColourManager.ColourOption) -> void:
 	red_connection.self_modulate = colour
 	blue_connection.visible = blue_node.is_enabled
 	blue_connection.self_modulate = colour
-	
+
+func _on_game_over() -> void:
+	set_process_input(false)

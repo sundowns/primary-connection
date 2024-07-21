@@ -12,11 +12,14 @@ const AIM_RAY_LENGTH: float = 10000
 @onready var hand: Node3D = $Camera3D/Hand
 @onready var blaster: Blaster = $Camera3D/Hand/Blaster
 
+var is_disabled: bool = false
+
 func _ready() -> void:
 	ColourManager.active_colour_changed.connect(self._on_active_colour_changed)
 
 func _process(delta: float) -> void:
-	point_blaster_at_crosshair(delta)
+	if not is_disabled:
+		point_blaster_at_crosshair(delta)
 
 func fire_at_point_on_screen(screen_position: Vector2) -> void:
 	var from: Vector3 = camera.project_ray_origin(screen_position)
