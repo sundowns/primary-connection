@@ -39,6 +39,7 @@ func generate_materials() -> void:
 	for colour_option in colours.keys():
 		var coloured_material: BaseMaterial3D = base_material.duplicate()
 		coloured_material.albedo_color = colours[colour_option]
+		coloured_material.emission = colours[colour_option]
 		materials[colour_option] = coloured_material
 
 func get_material(colour: ColourOption) -> BaseMaterial3D:
