@@ -35,9 +35,6 @@ script = ExtResource("1_ihufm")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_q3amv")
 
-[node name="SpawnTargetsInterval" type="Timer" parent="."]
-wait_time = 5.0
-
 [node name="Player" parent="." instance=ExtResource("1_cynns")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.315, 0)
 metadata/_edit_lock_ = true
@@ -136,7 +133,5 @@ offset_bottom = 100.0
 grow_vertical = 1
 
 [node name="GameOverScreen" parent="UI" instance=ExtResource("7_62s4u")]
-
-[connection signal="timeout" from="SpawnTargetsInterval" to="." method="_on_spawn_targets_interval_timeout"]
 
 [editable path="Player"]

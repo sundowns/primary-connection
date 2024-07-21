@@ -9,10 +9,10 @@ var speed_modifier: float = 1.0 # later baby...
 
 func _ready() -> void:
 	loop = false
+	remote_transform.remote_path = target.get_path()
 
 func set_target(new_target: Target) -> void:
 	target = new_target
-	remote_transform.remote_path = new_target.get_path()
 
 func _process(delta: float) -> void:
 	progress += delta * base_speed * speed_modifier
