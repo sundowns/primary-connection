@@ -31,3 +31,6 @@ func handle_correct_colour_hit() -> void:
 
 func handle_wrong_colour_hit() -> void:
 	print('wrong colour idiot...')
+
+func _on_expiry_timer_timeout():
+	pass # Replace with function body.

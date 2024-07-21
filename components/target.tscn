@@ -41,4 +41,8 @@ randomness = 1.0
 process_material = ExtResource("4_mlmb5")
 draw_pass_1 = SubResource("PrismMesh_mj1t7")
 
+[node name="ExpiryTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ExpiryTimer" to="." method="_on_expiry_timer_timeout"]
+
 [editable path="targetA2"]
