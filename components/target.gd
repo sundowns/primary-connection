@@ -5,9 +5,12 @@ class_name Target
 @onready var mesh: MeshInstance3D = $targetA2/targetA
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var shatter_particles: GPUParticles3D = $ShatterParticles
+@onready var smoke_particles: GPUParticles3D = $SmokeParticles
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	update_meshes()
+	smoke_particles.emitting = false
 
 func update_meshes() -> void:
 	var actual_colour := ColourManager.get_material(colour)
@@ -32,5 +35,9 @@ func handle_correct_colour_hit() -> void:
 func handle_wrong_colour_hit() -> void:
 	print('wrong colour idiot...')
 
-func _on_expiry_timer_timeout():
-	pass # Replace with function body.
+func _on_begin_expiry_timer_timeout():
+	animation_player.play("Expire")
+
+func _on_expiry_animation_ended() -> void:
+	LifeManager._on_target_self_destruct()
+	queue_free()

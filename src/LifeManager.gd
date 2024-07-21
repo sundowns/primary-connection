@@ -11,6 +11,7 @@ var is_running: bool = false
 
 func _ready() -> void:
 	set_process(false)
+	start_game() # TODO: do this elsewhere
 
 func start_game() -> void:
 	current_lives = starting_lives
