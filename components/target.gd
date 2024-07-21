@@ -21,6 +21,8 @@ func _ready() -> void:
 	smoke_particles.emitting = false
 	if is_starter_target:
 		begin_expiry_timer.queue_free()
+	else:
+		SpawnManager.targets_spawned += 1
 
 func update_meshes() -> void:
 	var actual_colour := ColourManager.get_material(colour)

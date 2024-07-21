@@ -43,7 +43,7 @@ func spawn_targets() -> void:
 		# spawn some new baddies
 		var difference: int = max_target_count - current_target_count
 		for i in range(difference):
-			var colour := ColourManager.get_random_colour()
+			var colour := SpawnManager.get_colour_for_new_spawn()
 			var new_target: Target = target_scene.instantiate()
 			new_target.colour = colour
 			target_anchor.add_child(new_target)

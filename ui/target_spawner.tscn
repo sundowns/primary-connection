@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg40metn47pir"]
+
+[ext_resource type="Script" path="res://ui/target_spawner.gd" id="1_qiivu"]
+
+[node name="TargetSpawner" type="Marker3D"]
+script = ExtResource("1_qiivu")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c210d5amxdmq6"]
+
+[ext_resource type="PackedScene" uid="uid://bg40metn47pir" path="res://ui/target_spawner.tscn" id="1_y8ve0"]
+
+[sub_resource type="Curve3D" id="Curve3D_5k21g"]
+
+[node name="TargetPath" type="Path3D"]
+curve = SubResource("Curve3D_5k21g")
+
+[node name="TargetSpawner" parent="." instance=ExtResource("1_y8ve0")]

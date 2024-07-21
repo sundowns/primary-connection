@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl3iv6ds2ru88"]
+
+[ext_resource type="Script" path="res://components/target_path_follower.gd" id="1_nye60"]
+
+[node name="TargetPathFollower" type="PathFollow3D"]
+script = ExtResource("1_nye60")
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="."]
+update_rotation = false
+update_scale = false

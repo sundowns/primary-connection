@@ -83,3 +83,11 @@ func colour_changed(red_enabled: bool, yellow_enabled: bool, blue_enabled: bool)
 func get_random_colour() -> ColourOption:
 	var all_options: Array = colours.keys()
 	return all_options[randi_range(0, all_options.size()-1)]
+
+func get_random_primary_colour() -> ColourOption:
+	var all_options: Array = [ColourOption.RED, ColourOption.YELLOW, ColourOption.BLUE]
+	return all_options[randi_range(0, all_options.size()-1)]
+
+func get_random_primary_or_secondary_colour() -> ColourOption:
+	var all_options: Array = [ColourOption.RED, ColourOption.YELLOW, ColourOption.BLUE,	ColourOption.PURPLE, ColourOption.GREEN, ColourOption.ORANGE ]
+	return all_options[randi_range(0, all_options.size()-1)]
