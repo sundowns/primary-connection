@@ -16,3 +16,6 @@ func set_target(new_target: Target) -> void:
 
 func _process(delta: float) -> void:
 	progress += delta * base_speed * speed_modifier
+
+func _on_target_death() -> void:
+	queue_free()

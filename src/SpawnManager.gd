@@ -1,5 +1,8 @@
 extends Node
 
+func start_game() -> void:
+	targets_spawned = 0
+
 var targets_spawned: int = 0
 
 func get_colour_for_new_spawn() -> ColourManager.ColourOption:

@@ -60,5 +60,6 @@ func _on_expiry_animation_ended() -> void:
 	explosion_effect.set_colour(colour)
 	DependencyHelper.retrieve("Effects").add_child(explosion_effect)
 	explosion_effect.global_position = global_position
+	destroyed.emit()
 	LifeManager._on_target_self_destruct()
 	queue_free()

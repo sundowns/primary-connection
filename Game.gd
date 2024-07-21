@@ -15,6 +15,7 @@ var game_is_over: bool = false
 
 func _ready():
 	DependencyHelper.store("Effects", effects_anchor) #🤠
+	DependencyHelper.store("Targets", target_anchor) #🤠
 	create_starter_target()
 	life_counter.initialise()
 	LifeManager.game_over.connect(self._on_game_over)
@@ -29,9 +30,10 @@ func _process(_delta: float) -> void:
 		target.look_at(player.global_position)
 
 func start_game() -> void:
-	spawn_targets() #TODO: not this
 	spawn_targets_timer.start()
 	LifeManager.start_game()
+	SpawnManager.start_game()
+	spawn_targets() #TODO: not this
 
 func _on_spawn_targets_interval_timeout():
 	spawn_targets()
@@ -51,7 +53,7 @@ func spawn_targets() -> void:
 
 func create_starter_target() -> void:
 	var first_target: Target = target_scene.instantiate()
-	first_target.colour = ColourManager.ColourOption.GREEN # requires pressing all 3 colour inputs
+	first_target.colour = ColourManager.ColourOption.BLUE 
 	first_target.set_as_starter_target()
 	target_anchor.add_child(first_target)
 	first_target.global_position = first_target_position.global_position

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://k3rsi41hyjlo"]
+[gd_scene load_steps=12 format=3 uid="uid://k3rsi41hyjlo"]
 
 [ext_resource type="PackedScene" uid="uid://cco6xg16mekua" path="res://components/player.tscn" id="1_cynns"]
 [ext_resource type="Script" path="res://Game.gd" id="1_ihufm"]
+[ext_resource type="PackedScene" uid="uid://c210d5amxdmq6" path="res://components/target_path.tscn" id="3_unk16"]
 [ext_resource type="PackedScene" uid="uid://lwnqyjojfgo1" path="res://ui/crosshair.tscn" id="3_vix6t"]
 [ext_resource type="MeshLibrary" uid="uid://j18a5m4ej2m5" path="res://assets/gridmap/SpaceStationMeshLibrary.tres" id="3_woa2m"]
 [ext_resource type="PackedScene" uid="uid://b52ubnjfv5hcg" path="res://ui/colour_controls.tscn" id="5_amdyr"]
@@ -17,6 +18,13 @@ ssao_intensity = 5.0
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
 sdfgi_read_sky_light = false
+
+[sub_resource type="Curve3D" id="Curve3D_xf4oi"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 5, -2.5, 0, 0, 0, 0, 0, 0, 0, 5, -2.5, -3),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4l5gn"]
 size = Vector3(1000, 1000, 1)
@@ -54,6 +62,12 @@ omni_attenuation = 2.14355
 [node name="Effects" type="Node" parent="."]
 
 [node name="Targets" type="Node" parent="."]
+
+[node name="TargetPaths" type="Node" parent="."]
+
+[node name="TargetPath" parent="TargetPaths" instance=ExtResource("3_unk16")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 2, 14)
+curve = SubResource("Curve3D_xf4oi")
 
 [node name="FloorGridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("3_woa2m")
