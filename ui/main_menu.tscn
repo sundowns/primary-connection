@@ -1,0 +1,197 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwnajwaacvgkw"]
+
+[ext_resource type="Script" path="res://ui/main_menu.gd" id="1_sluq5"]
+[ext_resource type="Texture2D" uid="uid://d0yf3dw3apxf5" path="res://assets/title.png" id="1_sx3k4"]
+[ext_resource type="FontFile" uid="uid://jncfxtbjxum0" path="res://assets/Kenney Future.ttf" id="3_to7o7"]
+
+[sub_resource type="Animation" id="Animation_qj0vk"]
+resource_name = "Idle"
+length = 3.0
+loop_mode = 1
+step = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5, 2.25, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1149, 499), Vector2(1149, 489), Vector2(1149, 499), Vector2(1149, 513.286), Vector2(1149, 499)]
+}
+
+[sub_resource type="Animation" id="Animation_k5s5b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1149, 499)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mnbvu"]
+_data = {
+"Idle": SubResource("Animation_qj0vk"),
+"RESET": SubResource("Animation_k5s5b")
+}
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sluq5")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.443137, 0.462745, 0.552941, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -517.5
+offset_top = -399.0
+offset_right = 517.5
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sx3k4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.5
+offset_top = -161.0
+offset_right = 123.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 120
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="FullscreenToggle" type="CheckButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_to7o7")
+theme_override_font_sizes/font_size = 32
+button_pressed = true
+text = "Fullscreen (reccomended)"
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_to7o7")
+theme_override_font_sizes/font_size = 32
+text = "PLAY"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -291.0
+offset_top = -41.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="LinkButton" type="LinkButton" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_to7o7")
+theme_override_font_sizes/font_size = 36
+text = "GitHub Repo"
+uri = "https://github.com/sundowns/primary-connection"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -91.0
+offset_right = 350.0
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Twitta" type="LinkButton" parent="MarginContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_to7o7")
+theme_override_font_sizes/font_size = 36
+text = "Follow me :]?"
+uri = "https://x.com/sundowns_"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1149.0
+offset_top = 499.0
+offset_right = 1730.0
+offset_bottom = 526.003
+rotation = -0.261799
+theme_override_fonts/font = ExtResource("3_to7o7")
+theme_override_font_sizes/font_size = 24
+text = "You should probably use a mouse :)"
+
+[node name="MarginContainer4" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -33.0
+offset_right = 313.0
+offset_bottom = 33.0
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+
+[node name="Controls" type="VBoxContainer" parent="MarginContainer4"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="MarginContainer4/Controls"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_to7o7")
+theme_override_font_sizes/font_size = 20
+text = "[A,W,D] Toggle Colours"
+
+[node name="Label2" type="Label" parent="MarginContainer4/Controls"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_to7o7")
+theme_override_font_sizes/font_size = 20
+text = "[MOUSE1] pew pew pew"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mnbvu")
+}
+autoplay = "Idle"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/FullscreenToggle" to="." method="_on_fullscreen_toggle_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

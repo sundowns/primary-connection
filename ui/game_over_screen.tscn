@@ -31,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.713726)
+color = Color(0, 0, 0, 0.54902)
 
 [node name="ThanksForPlaying" type="Label" parent="MarginContainer/Control"]
 layout_mode = 1
@@ -100,20 +100,22 @@ offset_right = 78.0
 offset_bottom = 161.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 80
 metadata/_edit_group_ = true
 
 [node name="Restart" type="Button" parent="MarginContainer/Control/HBoxContainer"]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_p6tbr")
 text = "Restart"
 
 [node name="Close" type="Button" parent="MarginContainer/Control/HBoxContainer"]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-text = "Exit Game"
+theme_override_fonts/font = ExtResource("2_p6tbr")
+text = "EXIT GAME"
 
-[node name="LinkButton" type="LinkButton" parent="MarginContainer/Control"]
+[node name="GithubLink" type="LinkButton" parent="MarginContainer/Control"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5

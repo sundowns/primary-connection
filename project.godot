@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Primary Connection"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://ui/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/image="res://assets/kenneyjamlogo.png"
 config/icon="res://icon.svg"
