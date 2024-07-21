@@ -27,7 +27,7 @@ func start_game() -> void:
 	spawn_timer.autostart = false
 	add_child(spawn_timer)
 	spawn_timer.timeout.connect(self._on_spawn_timer_timeout)
-	spawn_timer.start(current_spawn_interval)
+	spawn_timer.start(0.5)
 	set_process(true)
 
 var targets_spawned: int = 0
