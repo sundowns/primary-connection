@@ -20,7 +20,7 @@ grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 3
 theme_override_constants/margin_left = 150
-theme_override_constants/margin_top = 150
+theme_override_constants/margin_top = 225
 script = ExtResource("1_scv8i")
 
 [node name="Control" type="Control" parent="."]
