@@ -6,6 +6,9 @@ extends Node3D
 @onready var effects_anchor: Node = $Effects
 @onready var first_target_position: Marker3D = $FirstTargetPosition
 @onready var target_anchor: Node = $Targets
+
+@onready var music_player: AudioStreamPlayer = $AudioStreamPlayer
+
 const max_target_count: int = 5
 
 var target_scene: PackedScene = preload("res://components/target.tscn")
@@ -13,6 +16,7 @@ var target_scene: PackedScene = preload("res://components/target.tscn")
 var game_is_over: bool = false
 
 func _ready():
+	music_player.playing = false
 	DependencyHelper.store("Effects", effects_anchor) #🤠
 	DependencyHelper.store("Targets", target_anchor) #🤠
 	DependencyHelper.store("Player", player) #🤠
@@ -32,6 +36,7 @@ func _process(_delta: float) -> void:
 func start_game() -> void:
 	LifeManager.start_game()
 	SpawnManager.start_game()
+	music_player.play()
 
 func create_starter_target() -> void:
 	var first_target: Target = target_scene.instantiate()

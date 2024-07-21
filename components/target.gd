@@ -47,7 +47,7 @@ func handle_correct_colour_hit() -> void:
 	var effects_node = DependencyHelper.retrieve("Effects")
 	effects_node.add_child(shatter_particles)
 	shatter_particles.global_position = global_position
-	shatter_particles.emitting = true
+	shatter_particles.fire()
 	destroyed.emit()
 	LifeManager.targets_destroyed += 1
 	queue_free()

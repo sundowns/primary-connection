@@ -33,6 +33,7 @@ func fire_at_point_on_screen(screen_position: Vector2) -> void:
 			collider._on_hit(ColourManager.active_colour)
 	play_firing_animation()
 	blaster.create_beam(end_position, ColourManager.active_colour)
+	blaster.play_sound()
 
 func play_firing_animation() -> void:
 	if animation_player.is_playing():

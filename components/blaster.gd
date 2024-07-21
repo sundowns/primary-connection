@@ -3,6 +3,7 @@ class_name Blaster
 
 @onready var mesh: MeshInstance3D = $blasterG
 @onready var muzzle: Marker3D = $Muzzle
+@onready var audio_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 @export var beam_instance_scene: PackedScene = preload("res://components/beam_instance.tscn")
 
@@ -17,3 +18,6 @@ func create_beam(endpoint: Vector3, colour: ColourManager.ColourOption):
 	effects_node.add_child(new_beam)
 	new_beam.global_transform.origin = muzzle.global_position
 	new_beam.extend_to(endpoint)
+
+func play_sound() -> void:
+	audio_player.play()

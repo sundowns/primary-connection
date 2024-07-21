@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://wmfpm5hfj3mu"]
+[gd_scene load_steps=13 format=3 uid="uid://wmfpm5hfj3mu"]
 
 [ext_resource type="PackedScene" uid="uid://bx84vavgex705" path="res://assets/blasterG.glb" id="1_u654o"]
 [ext_resource type="Script" path="res://components/blaster.gd" id="2_bris6"]
@@ -6,6 +6,24 @@
 [ext_resource type="Material" uid="uid://dmexntw6rrdf1" path="res://materials/metal_dark.tres" id="3_kwx6o"]
 [ext_resource type="Material" uid="uid://b57eu2ctsjsa1" path="res://materials/metal_darker.tres" id="4_h1qj8"]
 [ext_resource type="Material" uid="uid://fdiwvllxyuqh" path="res://materials/blaster_colour.tres" id="5_6hf1k"]
+[ext_resource type="AudioStream" uid="uid://cy5chu3ipwyao" path="res://assets/audio/laserLarge_000.ogg" id="7_b8sqd"]
+[ext_resource type="AudioStream" uid="uid://7trb357fg6ct" path="res://assets/audio/laserLarge_001.ogg" id="8_fxqju"]
+[ext_resource type="AudioStream" uid="uid://cqivso8exd06a" path="res://assets/audio/laserLarge_002.ogg" id="9_iqpym"]
+[ext_resource type="AudioStream" uid="uid://bmasu7h3hn4f1" path="res://assets/audio/laserLarge_003.ogg" id="10_vgpfw"]
+[ext_resource type="AudioStream" uid="uid://c8wy3kqvhxq3h" path="res://assets/audio/laserLarge_004.ogg" id="11_vgsha"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2jshs"]
+streams_count = 5
+stream_0/stream = ExtResource("7_b8sqd")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("8_fxqju")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("9_iqpym")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("10_vgpfw")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("11_vgsha")
+stream_4/weight = 1.0
 
 [node name="Blaster" instance=ExtResource("1_u654o")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
@@ -19,3 +37,7 @@ surface_material_override/3 = ExtResource("5_6hf1k")
 
 [node name="Muzzle" type="Marker3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0755457, 0.386207)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2"]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.0605971, 0.465703)
+stream = SubResource("AudioStreamRandomizer_2jshs")

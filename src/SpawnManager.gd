@@ -13,7 +13,6 @@ var initial_spawn_count: int = 1
 var current_minimum_spawn_count: int = 1
 var current_maximum_spawn_count: int = 1
 var maximum_spawn_count: int = 5
-var spawn_count_curve: Curve = preload("res://components/spawn_count_curve.tres")
 
 var maximum_time_for_scaling: float = 60 * 5 # seconds
 
@@ -77,7 +76,7 @@ func update_spawn_count(elapsed: float) -> void:
 	if elapsed > 600:
 		current_maximum_spawn_count = 4
 	
-	if elapsed > 150:
+	if elapsed > 90:
 		current_minimum_spawn_count = 2
 	if elapsed > 400:
 		current_minimum_spawn_count = 3

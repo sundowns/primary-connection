@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://k3rsi41hyjlo"]
+[gd_scene load_steps=29 format=3 uid="uid://k3rsi41hyjlo"]
 
 [ext_resource type="PackedScene" uid="uid://cco6xg16mekua" path="res://components/player.tscn" id="1_cynns"]
 [ext_resource type="Script" path="res://Game.gd" id="1_ihufm"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cfwu8aeu0orn6" path="res://ui/life_counter.tscn" id="6_yle7a"]
 [ext_resource type="PackedScene" uid="uid://cyt8vd5vc4rwv" path="res://ui/game_over_screen.tscn" id="7_62s4u"]
 [ext_resource type="PackedScene" uid="uid://8shmenet74lf" path="res://ui/stats.tscn" id="9_ddtd2"]
+[ext_resource type="AudioStream" uid="uid://ddhitdxunwphl" path="res://assets/audio/Maximalism(chosic.com).mp3" id="10_mpib3"]
 
 [sub_resource type="Environment" id="Environment_q3amv"]
 background_mode = 1
@@ -301,5 +302,9 @@ grow_vertical = 1
 [node name="GameOverScreen" parent="UI" instance=ExtResource("7_62s4u")]
 
 [node name="Stats" parent="UI" instance=ExtResource("9_ddtd2")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_mpib3")
+volume_db = 0.25
 
 [editable path="Player"]
