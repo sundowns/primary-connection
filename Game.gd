@@ -1,5 +1,7 @@
 extends Node3D
 
+@onready var life_counter: LifeCounter = $UI/LifeCounter
+
 @onready var player: Player = $Player
 @onready var effects_anchor: Node = $Effects
 @onready var first_target_position: Marker3D = $FirstTargetPosition
@@ -12,6 +14,7 @@ var target_scene: PackedScene = preload("res://components/target.tscn")
 func _ready():
 	DependencyHelper.store("Effects", effects_anchor) #🤠
 	create_starter_target()
+	life_counter.initialise()
 
 func _input(event: InputEvent):
 	if event.is_action_pressed("fire"):

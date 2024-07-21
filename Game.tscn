@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://k3rsi41hyjlo"]
+[gd_scene load_steps=8 format=3 uid="uid://k3rsi41hyjlo"]
 
 [ext_resource type="PackedScene" uid="uid://cco6xg16mekua" path="res://components/player.tscn" id="1_cynns"]
 [ext_resource type="Script" path="res://Game.gd" id="1_ihufm"]
 [ext_resource type="PackedScene" uid="uid://lwnqyjojfgo1" path="res://ui/crosshair.tscn" id="3_vix6t"]
 [ext_resource type="MeshLibrary" uid="uid://j18a5m4ej2m5" path="res://assets/gridmap/SpaceStationMeshLibrary.tres" id="3_woa2m"]
 [ext_resource type="PackedScene" uid="uid://b52ubnjfv5hcg" path="res://ui/colour_controls.tscn" id="5_amdyr"]
+[ext_resource type="PackedScene" uid="uid://cfwu8aeu0orn6" path="res://ui/life_counter.tscn" id="6_yle7a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4l5gn"]
 size = Vector3(1000, 1000, 1)
@@ -95,6 +96,15 @@ shape = SubResource("BoxShape3D_4l5gn")
 [node name="Crosshair" parent="UI" instance=ExtResource("3_vix6t")]
 
 [node name="ColourControls" parent="UI" instance=ExtResource("5_amdyr")]
+
+[node name="LifeCounter" parent="UI" instance=ExtResource("6_yle7a")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+grow_horizontal = 2
 
 [connection signal="timeout" from="SpawnTargetsInterval" to="." method="_on_spawn_targets_interval_timeout"]
 

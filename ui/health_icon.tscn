@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://3atiejjbaa1q"]
+
+[ext_resource type="Texture2D" uid="uid://d1rt6bkvpfk2s" path="res://assets/suit_hearts.svg" id="1_xh3r2"]
+[ext_resource type="Script" path="res://ui/health_icon.gd" id="2_l340b"]
+
+[node name="HealthIcon" type="TextureRect"]
+self_modulate = Color(0.39, 0.39, 0.39, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_xh3r2")
+stretch_mode = 3
+script = ExtResource("2_l340b")

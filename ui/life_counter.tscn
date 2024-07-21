@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfwu8aeu0orn6"]
+
+[ext_resource type="Script" path="res://ui/life_counter.gd" id="1_ukj4n"]
+
+[node name="LifeCounter" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_top = 50
+script = ExtResource("1_ukj4n")
+
+[node name="HealthContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+alignment = 2

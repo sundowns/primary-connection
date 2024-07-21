@@ -1,6 +1,6 @@
 extends Node
 
-signal life_lost(lives_left: int)
+signal life_lost()
 signal game_over
 
 const starting_lives: int = 3
@@ -23,9 +23,11 @@ func _process(delta: float) -> void:
 		time_elapsed += delta
 
 func _on_target_self_destruct() -> void:
+	if not is_running:
+		return
 	current_lives -= 1
-	life_lost.emit(current_lives)
-	print('lives left: ', current_lives)
+	life_lost.emit()
 	if current_lives <= 0:
 		game_over.emit()
+		is_running = false
 		print('game over')

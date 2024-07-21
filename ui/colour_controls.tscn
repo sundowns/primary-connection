@@ -163,3 +163,12 @@ outline_image = ExtResource("7_um6cm")
 filled_image = ExtResource("8_ypcim")
 enabled_colour = Color(0.25, 0.4625, 1, 1)
 metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control/Nodes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.0588235)
