@@ -15,6 +15,7 @@ var game_is_over: bool = false
 func _ready():
 	DependencyHelper.store("Effects", effects_anchor) #🤠
 	DependencyHelper.store("Targets", target_anchor) #🤠
+	DependencyHelper.store("Player", player) #🤠
 	create_starter_target()
 	life_counter.initialise()
 	LifeManager.game_over.connect(self._on_game_over)

@@ -15,6 +15,9 @@ signal destroyed
 @onready var begin_expiry_timer: Timer = $BeginExpiryTimer
 
 var is_starter_target: bool = false
+var in_move_to_target_mode: bool = false
+var speed: float = 1.0
+var minimum_distance_to_player: float = 2.0
 
 func _ready() -> void:
 	update_meshes()
@@ -49,6 +52,15 @@ func handle_correct_colour_hit() -> void:
 func handle_wrong_colour_hit() -> void:
 	pass
 
+func _process(delta: float):
+	if in_move_to_target_mode:
+		var to_player: Vector3 = DependencyHelper.retrieve("Player").global_position - global_position
+		if to_player.length() < minimum_distance_to_player:
+			set_process(false)
+			return
+		var direction := to_player.normalized()
+		global_position += direction * speed * delta
+
 func set_as_starter_target() -> void:
 	is_starter_target = true
 
@@ -63,3 +75,8 @@ func _on_expiry_animation_ended() -> void:
 	destroyed.emit()
 	LifeManager._on_target_self_destruct()
 	queue_free()
+
+func switch_to_move_towards_player(new_speed: float) -> void:
+	in_move_to_target_mode = true
+	speed = new_speed
+	set_process(true)
