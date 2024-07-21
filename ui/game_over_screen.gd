@@ -13,6 +13,7 @@ func _ready():
 
 func _on_game_over(): 
 	visible = true
+	@warning_ignore("integer_division")
 	var minutes: int = int(LifeManager.time_elapsed) / 60
 	var seconds: int = int(LifeManager.time_elapsed) % 60
 	elapsed_time_label.text = elapsed_time_template % [minutes, seconds]
