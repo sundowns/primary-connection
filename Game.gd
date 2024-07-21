@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var player: Player = $Player
 @onready var effects_anchor: Node = $Effects
-
+@onready var first_target_position: Marker3D = $FirstTargetPosition
 @onready var target_anchor: Node = $Targets
 @onready var spawn_targets_timer: Timer = $SpawnTargetsInterval
 const max_target_count: int = 5
@@ -11,7 +11,7 @@ var target_scene: PackedScene = preload("res://components/target.tscn")
 
 func _ready():
 	DependencyHelper.store("Effects", effects_anchor) #🤠
-	call_deferred("spawn_targets")
+	create_starter_target()
 
 func _input(event: InputEvent):
 	if event.is_action_pressed("fire"):
@@ -20,6 +20,10 @@ func _input(event: InputEvent):
 func _process(_delta: float) -> void:
 	for target in target_anchor.get_children():
 		target.look_at(player.global_position)
+
+func start_game() -> void:
+	spawn_targets_timer.start()
+	LifeManager.start_game()
 
 func _on_spawn_targets_interval_timeout():
 	spawn_targets()
@@ -35,3 +39,14 @@ func spawn_targets() -> void:
 			new_target.colour = colour
 			target_anchor.add_child(new_target)
 			new_target.position += Vector3(randf_range(-2.5, 2.5), randf_range(-0.75, 1.5), randf_range(3, 8))
+
+func create_starter_target() -> void:
+	var first_target: Target = target_scene.instantiate()
+	first_target.colour = ColourManager.ColourOption.GREEN # requires pressing all 3 colour inputs
+	first_target.set_as_starter_target()
+	target_anchor.add_child(first_target)
+	first_target.global_position = first_target_position.global_position
+	first_target.destroyed.connect(self._on_starter_target_destroyed)
+
+func _on_starter_target_destroyed() -> void:
+	start_game()
