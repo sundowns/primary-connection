@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://8eykrwyq0drh"]
+[gd_scene load_steps=14 format=3 uid="uid://8eykrwyq0drh"]
 
 [ext_resource type="Script" path="res://components/explosioneffect.gd" id="1_86lmc"]
 [ext_resource type="Texture2D" uid="uid://cthky3muobpde" path="res://assets/star_08.png" id="1_gso56"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://uwg38hyjabrh" path="res://assets/star_02.png" id="5_75yqv"]
 [ext_resource type="Texture2D" uid="uid://dvkuq52tglv5g" path="res://assets/star_09.png" id="6_s8oo5"]
 [ext_resource type="Texture2D" uid="uid://d3qv62x8d0y3e" path="res://assets/star_03.png" id="10_n30h3"]
+[ext_resource type="Material" uid="uid://da7s82lfrsjj" path="res://materials/particles/explosion.tres" id="11_sf05y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sa0go"]
 animations = [{
@@ -46,6 +47,9 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="PrismMesh" id="PrismMesh_xai8e"]
+size = Vector3(0.01, 0.5, 0.01)
+
 [node name="ExplosionEffect" type="Node3D"]
 script = ExtResource("1_86lmc")
 
@@ -58,5 +62,13 @@ autoplay = "default"
 frame = 8
 frame_progress = 1.0
 speed_scale = 1.5
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 0.65
+process_material = ExtResource("11_sf05y")
+draw_pass_1 = SubResource("PrismMesh_xai8e")
 
 [connection signal="animation_finished" from="AnimatedSprite3D" to="." method="_on_animated_sprite_3d_animation_finished"]

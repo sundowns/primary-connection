@@ -3,7 +3,7 @@ extends Node
 signal life_lost()
 signal game_over
 
-const starting_lives: int = 3
+const starting_lives: int = 10
 var current_lives: float = 0
 
 var targets_destroyed: int = 0
