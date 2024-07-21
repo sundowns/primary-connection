@@ -19,6 +19,8 @@ var in_move_to_target_mode: bool = false
 var speed: float = 1.0
 var minimum_distance_to_player: float = 2.0
 
+var random_distance_offset: float = 0.0
+
 func _ready() -> void:
 	update_meshes()
 	smoke_particles.emitting = false
@@ -26,6 +28,7 @@ func _ready() -> void:
 		begin_expiry_timer.queue_free()
 	else:
 		SpawnManager.targets_spawned += 1
+	random_distance_offset = randf_range(-0.3, 0.3)
 
 func update_meshes() -> void:
 	var actual_colour := ColourManager.get_material(colour)
@@ -55,7 +58,7 @@ func handle_wrong_colour_hit() -> void:
 func _process(delta: float):
 	if in_move_to_target_mode:
 		var to_player: Vector3 = DependencyHelper.retrieve("Player").global_position - global_position
-		if to_player.length() < minimum_distance_to_player:
+		if to_player.length() < (minimum_distance_to_player + random_distance_offset):
 			set_process(false)
 			return
 		var direction := to_player.normalized()

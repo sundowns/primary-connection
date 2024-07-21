@@ -49,7 +49,8 @@ func _on_spawn_timer_timeout() -> void:
 			continue
 		var spawner: TargetSpawner = spawners[spawner_index]
 		spawner_indices_used.push_back(spawner_index)
-		spawner.spawn()
+		if spawner and is_instance_valid(spawner):
+			spawner.spawn()
 	spawn_timer.start(current_spawn_interval)
 
 func decide_number_to_spawn() -> int:
